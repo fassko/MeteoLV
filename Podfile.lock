@@ -1,0 +1,16 @@
+PODS:
+  - MeteoLVProvider (0.1.0)
+
+DEPENDENCIES:
+  - MeteoLVProvider (from `/Users/kristaps/Documents/iOS_dev/MeteoLVProvider`)
+
+EXTERNAL SOURCES:
+  MeteoLVProvider:
+    :path: /Users/kristaps/Documents/iOS_dev/MeteoLVProvider
+
+SPEC CHECKSUMS:
+  MeteoLVProvider: aff57435a2d1f23d2624e0f98c7311af93284148
+
+PODFILE CHECKSUM: bf11edacf1323146c494a9de5320cdcbc744ba9f
+
+COCOAPODS: 1.4.0
