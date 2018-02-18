@@ -15,7 +15,18 @@
 		6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9A2039EF16007C268C /* ObservationsViewController.swift */; };
 		6300DC9F2039F889007C268C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9E2039F889007C268C /* StationViewController.swift */; };
 		6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DCA02039FA08007C268C /* StationAnnotation.swift */; };
+		63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63E0991D203A0C3A00959498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6300DC7D2039ED7D007C268C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6300DC842039ED7D007C268C;
+			remoteInfo = MeteoLV;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6300DC852039ED7D007C268C /* MeteoLV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoLV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +38,9 @@
 		6300DC9A2039EF16007C268C /* ObservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewController.swift; sourceTree = "<group>"; };
 		6300DC9E2039F889007C268C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		6300DCA02039FA08007C268C /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
+		63E09918203A0C3900959498 /* MeteoLVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoLVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLVUITests.swift; sourceTree = "<group>"; };
+		63E0991C203A0C3A00959498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.release.xcconfig"; sourceTree = "<group>"; };
 		A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.debug.xcconfig"; sourceTree = "<group>"; };
 		F739193A2554C66DA37F55DE /* Pods_MeteoLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeteoLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +52,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D48D6EC018AC569D93ED25 /* Pods_MeteoLV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63E09915203A0C3900959498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				6300DC872039ED7D007C268C /* MeteoLV */,
+				63E09919203A0C3A00959498 /* MeteoLVUITests */,
 				6300DC862039ED7D007C268C /* Products */,
 				2EBFEC84474DEC4D18B5E447 /* Pods */,
 				033B7F854099AA330748ACAB /* Frameworks */,
@@ -75,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6300DC852039ED7D007C268C /* MeteoLV.app */,
+				63E09918203A0C3900959498 /* MeteoLVUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +115,15 @@
 				6300DC942039ED7D007C268C /* Info.plist */,
 			);
 			path = MeteoLV;
+			sourceTree = "<group>";
+		};
+		63E09919203A0C3A00959498 /* MeteoLVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */,
+				63E0991C203A0C3A00959498 /* Info.plist */,
+			);
+			path = MeteoLVUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +149,24 @@
 			productReference = 6300DC852039ED7D007C268C /* MeteoLV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		63E09917203A0C3900959498 /* MeteoLVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63E0991F203A0C3A00959498 /* Build configuration list for PBXNativeTarget "MeteoLVUITests" */;
+			buildPhases = (
+				63E09914203A0C3900959498 /* Sources */,
+				63E09915203A0C3900959498 /* Frameworks */,
+				63E09916203A0C3900959498 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63E0991E203A0C3A00959498 /* PBXTargetDependency */,
+			);
+			name = MeteoLVUITests;
+			productName = MeteoLVUITests;
+			productReference = 63E09918203A0C3900959498 /* MeteoLVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,7 +179,12 @@
 				TargetAttributes = {
 					6300DC842039ED7D007C268C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+					};
+					63E09917203A0C3900959498 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+						TestTargetID = 6300DC842039ED7D007C268C;
 					};
 				};
 			};
@@ -147,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				6300DC842039ED7D007C268C /* MeteoLV */,
+				63E09917203A0C3900959498 /* MeteoLVUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +215,13 @@
 				6300DC932039ED7D007C268C /* LaunchScreen.storyboard in Resources */,
 				6300DC902039ED7D007C268C /* Assets.xcassets in Resources */,
 				6300DC8E2039ED7D007C268C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63E09916203A0C3900959498 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +293,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63E09914203A0C3900959498 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63E0991E203A0C3A00959498 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6300DC842039ED7D007C268C /* MeteoLV */;
+			targetProxy = 63E0991D203A0C3A00959498 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6300DC8C2039ED7D007C268C /* Main.storyboard */ = {
@@ -364,12 +443,15 @@
 			baseConfigurationReference = A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cb952d6d-f68f-4a35-ad73-81be9d46c861";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,14 +462,53 @@
 			baseConfigurationReference = 728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "53733216-fea9-43ff-991c-22ab35b48155";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.fassko.MeteoLV";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63E09920203A0C3A00959498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3SGNZQGS68;
+				INFOPLIST_FILE = MeteoLVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLVUITests";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeteoLV;
+			};
+			name = Debug;
+		};
+		63E09921203A0C3A00959498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3SGNZQGS68;
+				INFOPLIST_FILE = MeteoLVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLVUITests";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeteoLV;
 			};
 			name = Release;
 		};
@@ -408,6 +529,15 @@
 			buildConfigurations = (
 				6300DC982039ED7D007C268C /* Debug */,
 				6300DC992039ED7D007C268C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63E0991F203A0C3A00959498 /* Build configuration list for PBXNativeTarget "MeteoLVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E09920203A0C3A00959498 /* Debug */,
+				63E09921203A0C3A00959498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

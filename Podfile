@@ -5,6 +5,6 @@ target 'MeteoLV' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'MeteoLVProvider', :path => '/Users/kristaps/Documents/iOS_dev/MeteoLVProvider'
+  pod 'MeteoLVProvider'
 
 end

@@ -1,0 +1,6 @@
+git_url "https://fassko@bitbucket.org/fassko/certificates"
+
+type "development"
+
+app_identifier ["com.fassko.MeteoLV", "com.fassko.MeteoLVUITests"]
+username "fassko@gmail.com"

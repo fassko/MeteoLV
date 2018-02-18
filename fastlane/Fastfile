@@ -1,0 +1,66 @@
+update_fastlane(nightly: false)
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Certs"
+  lane :certificates do
+    match(type: "appstore")
+    match(type: "development")
+  end
+  
+  desc "CI build"
+  lane :ci_build do
+    certificates
+    
+    # Test
+    scan(
+      workspace: "MeteoLV.xcworkspace",
+			scheme: "MeteoLV",
+			clean: true,
+      device: "iPhone X"
+    ) 
+  end
+  
+  desc "Circle CI lane"
+  lane :circleci do
+    setup_circle_ci
+    ci_build
+  end
+
+  desc "Travis lane"
+  lane :travis do
+    setup_travis
+    ci_build
+  end
+
+  lane :release do
+    increment_build_number build_number: get_version_number + "." + Time.new.strftime("%y%m%d.%H%M")
+
+    clear_derived_data
+
+    gym(
+      workspace: "MeteoLV.xcworkspace",
+      scheme: "MeteoLV",
+      clean: true,
+      output_name: "MeteoLV.ipa",
+      include_symbols: true
+    )
+    
+    testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+  
+  desc "Download dSYMs and upload to Testflight"
+  lane :dsyms do
+    download_dsyms(
+      platform: "ios"
+    )
+    upload_symbols_to_crashlytics(
+      api_token: "e8586ed0363ddcd4fc38b8f3aff4d3e095de5f07"
+    )
+    clean_build_artifacts
+  end
+end
