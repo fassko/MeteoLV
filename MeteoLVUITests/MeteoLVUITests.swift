@@ -26,5 +26,4 @@ class MeteoLVUITests: XCTestCase {
   func testLaunch() {
     sleep(10)
   }
-  
 }
