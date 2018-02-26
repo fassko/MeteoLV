@@ -12,7 +12,10 @@ import MeteoLVProvider
 
 class StationViewController: UITableViewController {
 
+  /// Station
   var station: Station!
+  
+  /// Station parameters
   var parameters: [Parameter] {
     guard let parameters = station.parameters else { return [] }
     
@@ -25,6 +28,7 @@ class StationViewController: UITableViewController {
     title = station.name
   }
   
+  // MARK: - Table view controller
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -43,5 +47,4 @@ class StationViewController: UITableViewController {
     
     return cell
   }
-
 }

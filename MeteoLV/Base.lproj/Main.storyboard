@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,6 @@
         <!--Navigation Controller-->
         <scene sceneID="ZPQ-X5-vmi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-8C-iUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="r7z-Tr-Ler" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o0R-tk-ptP">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -23,10 +21,11 @@
                         <segue destination="i7w-ef-Q9R" kind="relationship" relationship="rootViewController" id="ggr-5A-hk6"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-8C-iUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1489" y="87"/>
+            <point key="canvasLocation" x="-1319" y="87"/>
         </scene>
-        <!--Observations-->
+        <!--Novērojumi-->
         <scene sceneID="a0q-5r-NGn">
             <objects>
                 <viewController id="i7w-ef-Q9R" customClass="ObservationsViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,14 +42,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JDu-ve-jtc" firstAttribute="top" secondItem="3Mo-48-ZCx" secondAttribute="top" id="DL8-6G-Qv0"/>
-                            <constraint firstItem="JDu-ve-jtc" firstAttribute="leading" secondItem="3Mo-48-ZCx" secondAttribute="leading" id="mJ8-QZ-JKB"/>
-                            <constraint firstAttribute="bottom" secondItem="JDu-ve-jtc" secondAttribute="bottom" id="rv4-3h-Gin"/>
-                            <constraint firstItem="JDu-ve-jtc" firstAttribute="trailing" secondItem="3Mo-48-ZCx" secondAttribute="trailing" id="sn5-ic-ILi"/>
+                            <constraint firstItem="3Mo-48-ZCx" firstAttribute="top" secondItem="JDu-ve-jtc" secondAttribute="top" id="A0R-EK-fsp"/>
+                            <constraint firstItem="JDu-ve-jtc" firstAttribute="leading" secondItem="ryt-Vh-gsN" secondAttribute="leading" id="mJ8-QZ-JKB"/>
+                            <constraint firstItem="JDu-ve-jtc" firstAttribute="bottom" secondItem="ryt-Vh-gsN" secondAttribute="bottom" id="pS4-Eb-3S1"/>
+                            <constraint firstItem="JDu-ve-jtc" firstAttribute="trailing" secondItem="ryt-Vh-gsN" secondAttribute="trailing" id="sn5-ic-ILi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Mo-48-ZCx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Observations" id="CUN-yq-0ho">
+                    <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ab5-TJ-zTG">
                             <connections>
                                 <action selector="refreshObservations:" destination="i7w-ef-Q9R" id="0mh-bP-XnJ"/>
@@ -108,7 +107,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5S-Jr-K3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="95"/>
+            <point key="canvasLocation" x="209" y="87"/>
         </scene>
     </scenes>
 </document>

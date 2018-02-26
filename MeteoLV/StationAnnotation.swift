@@ -11,7 +11,10 @@ import MapKit
 
 import MeteoLVProvider
 
-class StationAnnotation: MKPointAnnotation {
+class StationAnnotation: MKPointAnnotation, UIAccessibilityIdentification {
+  
+  var accessibilityIdentifier: String?
+  
   let station: Station
   
   init(station: Station) {

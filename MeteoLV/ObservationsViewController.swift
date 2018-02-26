@@ -10,21 +10,24 @@ import UIKit
 import MapKit
 import MeteoLVProvider
 
-class ObservationsViewController: UIViewController, MKMapViewDelegate {
+class ObservationsViewController: UIViewController {
 
+  /// Map view
   @IBOutlet weak var mapView: MKMapView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D.init(latitude: 56.8800000, longitude: 24.6061111), 200000 , 500000)
+    let centerCoordinate = CLLocationCoordinate2D(latitude: 56.8800000, longitude: 24.6061111)
+    let region = MKCoordinateRegionMakeWithDistance(centerCoordinate, 200000, 500000)
     mapView.setRegion(region, animated: false)
     
     loadObservations()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "station", let station = sender as? Station, let stationViewController = segue.destination as? StationViewController {
+    if segue.identifier == "station", let station = sender as? Station,
+      let stationViewController = segue.destination as? StationViewController {
       stationViewController.station = station
     }
   }
@@ -33,23 +36,23 @@ class ObservationsViewController: UIViewController, MKMapViewDelegate {
     loadObservations()
   }
   
+  /**
+    Load observations
+  */
   fileprivate func loadObservations() {
     MeteoLVProvider.observations { result in
       switch result {
       case let .success(stations):
-        
-        DispatchQueue.main.async {
-          
-        }
-        
-        let annoations = stations.map({ station -> StationAnnotation in
+        let annoations = stations.map { station -> StationAnnotation in
           let annotation = StationAnnotation(station: station)
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
           annotation.subtitle = station.temperature
+          annotation.accessibilityLabel = station.name
+          annotation.accessibilityIdentifier = station.name
           
           return annotation
-        })
+        }
         
         DispatchQueue.main.async {
           self.mapView.removeAnnotations(self.mapView.annotations)
@@ -60,9 +63,10 @@ class ObservationsViewController: UIViewController, MKMapViewDelegate {
       }
     }
   }
-  
-  
-  //MARK: MapView delegate methods
+}
+
+// MARK: - MapView delegate methods
+extension ObservationsViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     let identifier = "marker"
@@ -72,22 +76,24 @@ class ObservationsViewController: UIViewController, MKMapViewDelegate {
       as? MKMarkerAnnotationView {
       dequeuedView.annotation = annotation
       view = dequeuedView
+      view.displayPriority = .required
     } else {
       view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
       view.canShowCallout = true
       view.animatesWhenAdded = true
       view.calloutOffset = CGPoint(x: -5, y: 5)
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+      view.displayPriority = .required
     }
-    return view
     
+    return view
   }
   
-  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+               calloutAccessoryControlTapped control: UIControl) {
     guard let station = view.annotation as? StationAnnotation else { return }
     
     performSegue(withIdentifier: "station", sender: station.station)
     mapView.deselectAnnotation(view.annotation, animated: true)
   }
-
 }
