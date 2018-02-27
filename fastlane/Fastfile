@@ -10,6 +10,13 @@ platform :ios do
     match(type: "development")
   end
   
+  lane :generate_icon do
+    appicon(appicon_image_file: 'Icon.png',
+      appicon_devices: [:ipad, :iphone, :ios_marketing],
+      appicon_path: 'MeteoLV/Assets.xcassets' 
+    )
+  end
+  
   desc "CI build"
   lane :ci_build do
     # certificates
