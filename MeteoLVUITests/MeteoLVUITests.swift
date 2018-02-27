@@ -63,6 +63,13 @@ class MeteoLVUITests: XCTestCase {
     
     let backButton = navigationBar.buttons["Novērojumi"].firstMatch
     backButton.tap()
+    
+    let observationsNavigationbar = app.navigationBars["Novērojumi"].firstMatch
+    XCTAssertTrue(waitForElementToAppear(observationsNavigationbar))
+    
+    let refreshButton = observationsNavigationbar.buttons["Refresh"]
+    XCTAssertTrue(waitForElementToAppear(refreshButton))
+    refreshButton.tap()
   }
   
   fileprivate func takeScreenShot(_ name: String) {
