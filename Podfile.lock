@@ -1,15 +1,22 @@
 PODS:
+  - Crashlytics (3.10.0):
+    - Fabric (~> 1.7.3)
+  - Fabric (1.7.3)
   - MeteoLVProvider (0.1.0)
   - SwiftLint (0.25.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - MeteoLVProvider
   - SwiftLint
 
 SPEC CHECKSUMS:
+  Crashlytics: a989ef242b66605577a425733797f810bd2725eb
+  Fabric: bb495bb9a7a7677c6d03a1f8b83d95bc49b47e41
   MeteoLVProvider: e0167ef67f890d56219e757b62200218ed4d81cc
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: e9ecba4bb01f9882cbf5bdfa51f1b15167b4424b
+PODFILE CHECKSUM: 63f4228836556c6fb0008c9d3b85675958d2b265
 
 COCOAPODS: 1.4.0
