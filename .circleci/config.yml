@@ -15,10 +15,7 @@ jobs:
       
       - run:
           name: Before Install
-          command: |
-            export LC_ALL=en_US.UTF-8
-            export LANG=en_US.UTF-8
-            echo -e "machine bitbucket.org\n  login fassko\n  password $CI_USER_PASSWORD" >> ~/.netrc 
+          command: echo -e "machine bitbucket.org\n  login fassko\n  password $CI_USER_PASSWORD" >> ~/.netrc 
           
       - run:
           name: Cocoapods
@@ -37,5 +34,7 @@ jobs:
       - run:
           name: Build and run tests
           command: |
+            export LC_ALL=en_US.UTF-8
+            export LANG=en_US.UTF-8
             sudo systemsetup -settimezone Europe/Tallinn
             fastlane circleci
