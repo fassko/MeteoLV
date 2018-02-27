@@ -16,6 +16,8 @@
 		6300DC9F2039F889007C268C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9E2039F889007C268C /* StationViewController.swift */; };
 		6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DCA02039FA08007C268C /* StationAnnotation.swift */; };
 		63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */; };
+		63F024422045E7D200C07D89 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024412045E7D200C07D89 /* XCTest+Extensions.swift */; };
+		63F024442045EB6B00C07D89 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024432045EB6B00C07D89 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		63E09918203A0C3900959498 /* MeteoLVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoLVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLVUITests.swift; sourceTree = "<group>"; };
 		63E0991C203A0C3A00959498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F024412045E7D200C07D89 /* XCTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
+		63F024432045EB6B00C07D89 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.release.xcconfig"; sourceTree = "<group>"; };
 		A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.debug.xcconfig"; sourceTree = "<group>"; };
 		F739193A2554C66DA37F55DE /* Pods_MeteoLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeteoLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,8 @@
 		63E09919203A0C3A00959498 /* MeteoLVUITests */ = {
 			isa = PBXGroup;
 			children = (
+				63F024432045EB6B00C07D89 /* SnapshotHelper.swift */,
+				63F024412045E7D200C07D89 /* XCTest+Extensions.swift */,
 				63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */,
 				63E0991C203A0C3A00959498 /* Info.plist */,
 			);
@@ -312,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F024422045E7D200C07D89 /* XCTest+Extensions.swift in Sources */,
 				63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */,
+				63F024442045EB6B00C07D89 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

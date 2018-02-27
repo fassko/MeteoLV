@@ -16,7 +16,6 @@ jobs:
       - run:
           name: Before Install
           command: |
-            sudo systemsetup -settimezone Europe/Tallinn
             export LC_ALL=en_US.UTF-8
             export LANG=en_US.UTF-8
             echo -e "machine bitbucket.org\n  login fassko\n  password $CI_USER_PASSWORD" >> ~/.netrc 
@@ -24,16 +23,19 @@ jobs:
       - run:
           name: Cocoapods
           command: |
+            echo "ruby-2.4" > ~/.ruby-version
+            sudo gem install cocoapods
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-            pod install --repo-update
+            pod install
           
       - run:
-          name: Install
+          name: Fastlane install
           command: |
             sudo gem install fastlane --no-doc
             sudo gem cleanup
 
-      # Build the app and run tests
       - run:
           name: Build and run tests
-          command: fastlane circleci
+          command: |
+            sudo systemsetup -settimezone Europe/Tallinn
+            fastlane circleci

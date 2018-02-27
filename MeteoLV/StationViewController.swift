@@ -27,8 +27,10 @@ class StationViewController: UITableViewController {
     
     title = station.name
   }
-  
-  // MARK: - Table view controller
+}
+
+// MARK: - Table view controller
+extension StationViewController {
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }

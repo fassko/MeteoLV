@@ -10,6 +10,11 @@ import XCTest
 
 class MeteoLVUITests: XCTestCase {
   
+  /// Screenshot counter
+  var counter = 0
+  
+  let observationName = "Rūjiena"
+  
   override func setUp() {
     super.setUp()
     
@@ -21,21 +26,47 @@ class MeteoLVUITests: XCTestCase {
     super.tearDown()
   }
   
-  func testLaunch() {
+  func testAppRun() {
     let app = XCUIApplication()
+    setupSnapshot(app)
     app.launch()
+  
+    let predicate = NSPredicate(format: "label BEGINSWITH '\(observationName)'")
+    let annotation = app.otherElements.matching(predicate).element(boundBy: 0)
     
-    sleep(10)
+    XCTAssertTrue(waitForElementToAppear(annotation, timeout: 10))
     
-    let annotation = app.otherElements.matching(NSPredicate(format: "label BEGINSWITH 'Rūjiena'")).element(boundBy: 0)
+    takeScreenShot("Observations")
     
-//    let annotation = app.maps.element.otherElements.matching(NSPredicate(format: "label BEGINSWITH 'Bauska'")).firstMatch
-//    annotation.tap()
     annotation.tap()
-    sleep(1)
     
-    annotation.buttons["More Info"].tap()
+    let moreInfoButton = app.buttons["More Info"]
+    XCTAssertTrue(waitForElementToAppear(moreInfoButton))
     
-    sleep(5)
+    takeScreenShot("Tap_Observation")
+    
+    moreInfoButton.tap()
+    
+    let navigationBar = app.navigationBars[observationName]
+    XCTAssertTrue(waitForElementToAppear(navigationBar))
+    
+    takeScreenShot("Observation_Data")
+    
+    let parametersTable = app.tables.firstMatch
+    let temperatureCell = parametersTable.cells.staticTexts["Temperatūra (°C)"]
+    let windSpeedCell = parametersTable.cells.staticTexts["Vēja ātrums (m/s)"]
+    let windDirectionCell = parametersTable.cells.staticTexts["Vēja virziens"]
+    
+    XCTAssertTrue(waitForElementToAppear(temperatureCell))
+    XCTAssertTrue(waitForElementToAppear(windSpeedCell))
+    XCTAssertTrue(waitForElementToAppear(windDirectionCell))
+    
+    let backButton = navigationBar.buttons["Novērojumi"].firstMatch
+    backButton.tap()
+  }
+  
+  fileprivate func takeScreenShot(_ name: String) {
+    snapshot("\(String(format: "%02d", counter))_\(name)")
+    counter += 1
   }
 }
