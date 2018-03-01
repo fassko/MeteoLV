@@ -1,0 +1,1 @@
+App shows current weather observations in Latvia. Data comes from Latvian Environment, Geology and Meteorology Centre.
