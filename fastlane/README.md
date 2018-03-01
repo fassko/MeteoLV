@@ -46,9 +46,9 @@ Travis lane
 fastlane ios build
 ```
 
-### ios beta_build
+### ios beta
 ```
-fastlane ios beta_build
+fastlane ios beta
 ```
 
 ### ios release
@@ -56,6 +56,11 @@ fastlane ios beta_build
 fastlane ios release
 ```
 
+### ios release_github
+```
+fastlane ios release_github
+```
+Deploy a new version to the App Store
 ### ios dsyms
 ```
 fastlane ios dsyms
