@@ -11,6 +11,9 @@ import MapKit
 import MeteoLVProvider
 
 class ObservationsViewController: UIViewController {
+  
+  /// Meteo data provider
+  let meteoDataProvider = MeteoLVProvider()
 
   /// Map view
   @IBOutlet weak var mapView: MKMapView!
@@ -23,24 +26,30 @@ class ObservationsViewController: UIViewController {
     mapView.setRegion(region, animated: false)
     
     loadObservations()
+    loadLatvianRoadsObservations()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "station", let station = sender as? Station,
       let stationViewController = segue.destination as? StationViewController {
       stationViewController.station = station
+    } else if segue.identifier == "roadStation", let station = sender as? LatvianRoadsStation,
+      let stationViewController = segue.destination as? RoadStationTableViewController {
+      stationViewController.station = station
     }
   }
   
   @IBAction func refreshObservations(_ sender: Any) {
+    self.mapView.removeAnnotations(self.mapView.annotations)
     loadObservations()
+    loadLatvianRoadsObservations()
   }
   
   /**
     Load observations
   */
   fileprivate func loadObservations() {
-    MeteoLVProvider.observations { result in
+    meteoDataProvider.observations { result in
       switch result {
       case let .success(stations):
         let annoations = stations.map { station -> StationAnnotation in
@@ -55,7 +64,33 @@ class ObservationsViewController: UIViewController {
         }
         
         DispatchQueue.main.async {
-          self.mapView.removeAnnotations(self.mapView.annotations)
+          self.mapView.addAnnotations(annoations)
+        }
+      case let .failure(error):
+        print(error)
+      }
+    }
+  }
+  
+  /**
+   Load Latvian roads observation
+  */
+  fileprivate func loadLatvianRoadsObservations() {
+    meteoDataProvider.latvianRoadsObservations { result in
+      switch result {
+      case let .success(stations):
+        let annoations = stations.map { station -> RoadsStationAnnotation in
+          let annotation = RoadsStationAnnotation(station: station)
+          annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
+          annotation.title = station.name
+          annotation.subtitle = station.temperature
+          annotation.accessibilityLabel = station.name
+          annotation.accessibilityIdentifier = station.name
+          
+          return annotation
+        }
+        
+        DispatchQueue.main.async {
           self.mapView.addAnnotations(annoations)
         }
       case let .failure(error):
@@ -91,9 +126,13 @@ extension ObservationsViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                calloutAccessoryControlTapped control: UIControl) {
-    guard let station = view.annotation as? StationAnnotation else { return }
     
-    performSegue(withIdentifier: "station", sender: station.station)
-    mapView.deselectAnnotation(view.annotation, animated: true)
+    if let station = view.annotation as? StationAnnotation {
+      performSegue(withIdentifier: "station", sender: station.station)
+      mapView.deselectAnnotation(view.annotation, animated: true)
+    } else if let station = view.annotation as? RoadsStationAnnotation, station.station.weatherData.count > 0 {
+      performSegue(withIdentifier: "roadStation", sender: station.station)
+      mapView.deselectAnnotation(view.annotation, animated: true)
+    }
   }
 }

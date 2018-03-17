@@ -8,5 +8,5 @@ target 'MeteoLV' do
   pod 'SwiftLint'
   pod 'Fabric'
   pod 'Crashlytics'
-  
+
 end
