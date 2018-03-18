@@ -18,9 +18,9 @@ class StationAnnotation: MKPointAnnotation, UIAccessibilityIdentification {
   var accessibilityIdentifier: String?
   
   /// Observation station
-  let station: Station
+  let station: ObservationStation
   
-  init(station: Station) {
+  init(station: ObservationStation) {
     self.station = station
     
     super.init()

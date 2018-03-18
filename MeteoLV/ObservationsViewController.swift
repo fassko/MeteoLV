@@ -11,9 +11,14 @@ import MapKit
 import MeteoLVProvider
 
 class ObservationsViewController: UIViewController {
+  
+  /// Meteo data provider
+  let meteoDataProvider = MeteoLVProvider()
 
   /// Map view
   @IBOutlet weak var mapView: MKMapView!
+  
+  fileprivate let locationManager = CLLocationManager()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,28 +28,31 @@ class ObservationsViewController: UIViewController {
     mapView.setRegion(region, animated: false)
     
     loadObservations()
+    loadLatvianRoadsObservations()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "station", let station = sender as? Station,
+    if segue.identifier == "station", let station = sender as? ObservationStation,
       let stationViewController = segue.destination as? StationViewController {
       stationViewController.station = station
     }
   }
   
   @IBAction func refreshObservations(_ sender: Any) {
+    self.mapView.removeAnnotations(self.mapView.annotations)
     loadObservations()
+    loadLatvianRoadsObservations()
   }
   
   /**
     Load observations
   */
   fileprivate func loadObservations() {
-    MeteoLVProvider.observations { result in
+    meteoDataProvider.observations { result in
       switch result {
       case let .success(stations):
         let annoations = stations.map { station -> StationAnnotation in
-          let annotation = StationAnnotation(station: station)
+          let annotation = StationAnnotation(station: .meteo(station))
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
           annotation.subtitle = station.temperature
@@ -55,7 +63,33 @@ class ObservationsViewController: UIViewController {
         }
         
         DispatchQueue.main.async {
-          self.mapView.removeAnnotations(self.mapView.annotations)
+          self.mapView.addAnnotations(annoations)
+        }
+      case let .failure(error):
+        print(error)
+      }
+    }
+  }
+  
+  /**
+   Load Latvian roads observation
+  */
+  fileprivate func loadLatvianRoadsObservations() {
+    meteoDataProvider.latvianRoadsObservations { result in
+      switch result {
+      case let .success(stations):
+        let annoations = stations.map { station -> StationAnnotation in
+          let annotation = StationAnnotation(station: .road(station))
+          annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
+          annotation.title = station.name
+          annotation.subtitle = station.temperature
+          annotation.accessibilityLabel = station.name
+          annotation.accessibilityIdentifier = station.name
+          
+          return annotation
+        }
+        
+        DispatchQueue.main.async {
           self.mapView.addAnnotations(annoations)
         }
       case let .failure(error):
@@ -76,14 +110,23 @@ extension ObservationsViewController: MKMapViewDelegate {
       as? MKMarkerAnnotationView {
       dequeuedView.annotation = annotation
       view = dequeuedView
-      view.displayPriority = .required
     } else {
       view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
       view.canShowCallout = true
       view.animatesWhenAdded = true
       view.calloutOffset = CGPoint(x: -5, y: 5)
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-      view.displayPriority = .required
+    }
+    
+    view.displayPriority = .required
+    
+    if let stationAnnotation = view.annotation as? StationAnnotation {
+      switch stationAnnotation.station {
+      case .meteo:
+        view.markerTintColor = UIColor(red: 0.05, green: 0.29, blue: 0.53, alpha: 1.0)
+      case .road:
+        view.markerTintColor = .lightGray
+      }
     }
     
     return view
@@ -91,9 +134,10 @@ extension ObservationsViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                calloutAccessoryControlTapped control: UIControl) {
-    guard let station = view.annotation as? StationAnnotation else { return }
     
-    performSegue(withIdentifier: "station", sender: station.station)
-    mapView.deselectAnnotation(view.annotation, animated: true)
+    if let station = view.annotation as? StationAnnotation {
+      performSegue(withIdentifier: "station", sender: station.station)
+      mapView.deselectAnnotation(view.annotation, animated: true)
+    }
   }
 }

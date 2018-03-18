@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,6 +52,11 @@
                         <viewLayoutGuide key="safeArea" id="3Mo-48-ZCx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="XIJ-RS-AyX">
+                            <connections>
+                                <segue destination="heC-P8-Txv" kind="show" identifier="info" id="A4q-rf-vvb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ab5-TJ-zTG">
                             <connections>
                                 <action selector="refreshObservations:" destination="i7w-ef-Q9R" id="0mh-bP-XnJ"/>
@@ -64,6 +71,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fU-ie-ils" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-589.60000000000002" y="87.192118226600982"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="es2-IU-uPS">
+            <objects>
+                <viewController title="Info" id="heC-P8-Txv" customClass="InfoViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ax-2O-KgN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-qJ-hur">
+                                <rect key="frame" x="75" y="104" width="225" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fz0-qJ-hur" secondAttribute="height" multiplier="225:191" id="57E-4p-Dd3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l3R-nr-Nn0">
+                                <rect key="frame" x="16" y="303" width="343" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fz0-qJ-hur" firstAttribute="centerX" secondItem="5ax-2O-KgN" secondAttribute="centerX" id="Cf7-Bj-hlL"/>
+                            <constraint firstItem="l3R-nr-Nn0" firstAttribute="leading" secondItem="vDG-B0-EFj" secondAttribute="leading" constant="16" id="Fwd-y8-bIj"/>
+                            <constraint firstItem="fz0-qJ-hur" firstAttribute="width" secondItem="vDG-B0-EFj" secondAttribute="width" multiplier="0.6" id="HYJ-99-fEw"/>
+                            <constraint firstItem="fz0-qJ-hur" firstAttribute="top" secondItem="vDG-B0-EFj" secondAttribute="top" constant="16" id="JGz-HP-MIt"/>
+                            <constraint firstItem="l3R-nr-Nn0" firstAttribute="top" secondItem="fz0-qJ-hur" secondAttribute="bottom" constant="8" id="Sjz-ak-xjd"/>
+                            <constraint firstItem="l3R-nr-Nn0" firstAttribute="bottom" secondItem="vDG-B0-EFj" secondAttribute="bottom" id="a2G-Ui-uSO"/>
+                            <constraint firstItem="vDG-B0-EFj" firstAttribute="trailing" secondItem="l3R-nr-Nn0" secondAttribute="trailing" constant="16" id="tgU-cJ-Nro"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vDG-B0-EFj"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextView" destination="l3R-nr-Nn0" id="N3m-WW-jJF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGZ-ES-z0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="822"/>
         </scene>
         <!--Station View Controller-->
         <scene sceneID="Cgx-5b-40b">
@@ -107,7 +156,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5S-Jr-K3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="87"/>
+            <point key="canvasLocation" x="207" y="86"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="321" height="308"/>
+    </resources>
 </document>
