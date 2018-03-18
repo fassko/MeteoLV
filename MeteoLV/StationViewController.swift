@@ -12,15 +12,8 @@ import MeteoLVProvider
 
 class StationViewController: UITableViewController {
 
-  /// Station
-  var station: Station!
-  
-  /// Station parameters
-  var parameters: [Parameter] {
-    guard let parameters = station.parameters else { return [] }
-    
-    return parameters.filter({ $0.value != nil })
-  }
+  /// Observation station
+  var station: ObservationStation!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,16 +29,16 @@ extension StationViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return parameters.count
+    return station.parameters.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "stationCell", for: indexPath)
 
-    let parameter = parameters[indexPath.row]
+    let parameter = station.parameters[indexPath.row]
 
-    cell.textLabel?.text = parameter.name
-    cell.detailTextLabel?.text = parameter.value
+    cell.textLabel?.text = parameter["name"]
+    cell.detailTextLabel?.text = parameter["value"]
     
     return cell
   }

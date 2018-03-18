@@ -30,11 +30,8 @@ class ObservationsViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "station", let station = sender as? Station,
+    if segue.identifier == "station", let station = sender as? ObservationStation,
       let stationViewController = segue.destination as? StationViewController {
-      stationViewController.station = station
-    } else if segue.identifier == "roadStation", let station = sender as? LatvianRoadsStation,
-      let stationViewController = segue.destination as? RoadStationTableViewController {
       stationViewController.station = station
     }
   }
@@ -53,7 +50,7 @@ class ObservationsViewController: UIViewController {
       switch result {
       case let .success(stations):
         let annoations = stations.map { station -> StationAnnotation in
-          let annotation = StationAnnotation(station: station)
+          let annotation = StationAnnotation(station: .meteo(station))
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
           annotation.subtitle = station.temperature
@@ -79,8 +76,8 @@ class ObservationsViewController: UIViewController {
     meteoDataProvider.latvianRoadsObservations { result in
       switch result {
       case let .success(stations):
-        let annoations = stations.map { station -> RoadsStationAnnotation in
-          let annotation = RoadsStationAnnotation(station: station)
+        let annoations = stations.map { station -> StationAnnotation in
+          let annotation = StationAnnotation(station: .road(station))
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
           annotation.subtitle = station.temperature
@@ -111,14 +108,23 @@ extension ObservationsViewController: MKMapViewDelegate {
       as? MKMarkerAnnotationView {
       dequeuedView.annotation = annotation
       view = dequeuedView
-      view.displayPriority = .required
     } else {
       view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
       view.canShowCallout = true
       view.animatesWhenAdded = true
       view.calloutOffset = CGPoint(x: -5, y: 5)
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-      view.displayPriority = .required
+    }
+    
+    view.displayPriority = .required
+    
+    if let stationAnnotation = view.annotation as? StationAnnotation {
+      switch stationAnnotation.station {
+      case .meteo:
+        view.markerTintColor = UIColor(red: 0.05, green: 0.29, blue: 0.53, alpha: 1.0)
+      case .road:
+        view.markerTintColor = .lightGray
+      }
     }
     
     return view
@@ -129,9 +135,6 @@ extension ObservationsViewController: MKMapViewDelegate {
     
     if let station = view.annotation as? StationAnnotation {
       performSegue(withIdentifier: "station", sender: station.station)
-      mapView.deselectAnnotation(view.annotation, animated: true)
-    } else if let station = view.annotation as? RoadsStationAnnotation, station.station.weatherData.count > 0 {
-      performSegue(withIdentifier: "roadStation", sender: station.station)
       mapView.deselectAnnotation(view.annotation, animated: true)
     }
   }

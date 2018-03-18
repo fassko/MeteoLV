@@ -14,8 +14,7 @@
 		6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9A2039EF16007C268C /* ObservationsViewController.swift */; };
 		6300DC9F2039F889007C268C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9E2039F889007C268C /* StationViewController.swift */; };
 		6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DCA02039FA08007C268C /* StationAnnotation.swift */; };
-		6382D58D205DA9E200CAE2D4 /* RoadsStationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D58C205DA9E200CAE2D4 /* RoadsStationAnnotation.swift */; };
-		6382D591205DB20D00CAE2D4 /* RoadStationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6382D590205DB20D00CAE2D4 /* RoadStationTableViewController.swift */; };
+		635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
 		63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */; };
 		63F024422045E7D200C07D89 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024412045E7D200C07D89 /* XCTest+Extensions.swift */; };
 		63F024442045EB6B00C07D89 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024432045EB6B00C07D89 /* SnapshotHelper.swift */; };
@@ -41,8 +40,7 @@
 		6300DC9A2039EF16007C268C /* ObservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewController.swift; sourceTree = "<group>"; };
 		6300DC9E2039F889007C268C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		6300DCA02039FA08007C268C /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
-		6382D58C205DA9E200CAE2D4 /* RoadsStationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsStationAnnotation.swift; sourceTree = "<group>"; };
-		6382D590205DB20D00CAE2D4 /* RoadStationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadStationTableViewController.swift; sourceTree = "<group>"; };
+		635524EE205E56A700EC0E23 /* ObservationsStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsStation.swift; sourceTree = "<group>"; };
 		63E09918203A0C3900959498 /* MeteoLVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoLVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLVUITests.swift; sourceTree = "<group>"; };
 		63E0991C203A0C3A00959498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,9 +114,8 @@
 				6300DC882039ED7D007C268C /* AppDelegate.swift */,
 				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
 				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
-				6382D58C205DA9E200CAE2D4 /* RoadsStationAnnotation.swift */,
 				6300DC9E2039F889007C268C /* StationViewController.swift */,
-				6382D590205DB20D00CAE2D4 /* RoadStationTableViewController.swift */,
+				635524EE205E56A700EC0E23 /* ObservationsStation.swift */,
 				6300DC8C2039ED7D007C268C /* Main.storyboard */,
 				6300DC912039ED7D007C268C /* LaunchScreen.storyboard */,
 				6300DC942039ED7D007C268C /* Info.plist */,
@@ -330,11 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6382D58D205DA9E200CAE2D4 /* RoadsStationAnnotation.swift in Sources */,
 				6300DC9F2039F889007C268C /* StationViewController.swift in Sources */,
+				635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */,
 				6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */,
 				6300DC892039ED7D007C268C /* AppDelegate.swift in Sources */,
-				6382D591205DB20D00CAE2D4 /* RoadStationTableViewController.swift in Sources */,
 				6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
