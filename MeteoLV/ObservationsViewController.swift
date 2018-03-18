@@ -18,6 +18,8 @@ class ObservationsViewController: UIViewController {
   /// Map view
   @IBOutlet weak var mapView: MKMapView!
   
+  fileprivate let locationManager = CLLocationManager()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
