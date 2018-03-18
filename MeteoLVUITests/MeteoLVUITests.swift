@@ -56,8 +56,6 @@ class MeteoLVUITests: XCTestCase {
     
     XCTAssertTrue(waitForElementToAppear(annotation, timeout: 10))
     
-    takeScreenShot("station_\(stationName)")
-    
     annotation.tap()
     
     let moreInfoButton = app.buttons["More Info"]
