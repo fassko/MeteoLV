@@ -114,11 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				6300DC882039ED7D007C268C /* AppDelegate.swift */,
-				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
-				635524F3205E5E6700EC0E23 /* InfoViewController.swift */,
-				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
-				6300DC9E2039F889007C268C /* StationViewController.swift */,
 				635524EE205E56A700EC0E23 /* ObservationsStation.swift */,
+				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
+				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
+				6300DC9E2039F889007C268C /* StationViewController.swift */,
+				635524F3205E5E6700EC0E23 /* InfoViewController.swift */,
 				6300DC8C2039ED7D007C268C /* Main.storyboard */,
 				6300DC912039ED7D007C268C /* LaunchScreen.storyboard */,
 				6300DC942039ED7D007C268C /* Info.plist */,

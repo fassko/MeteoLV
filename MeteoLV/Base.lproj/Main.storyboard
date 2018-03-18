@@ -52,7 +52,7 @@
                         <viewLayoutGuide key="safeArea" id="3Mo-48-ZCx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="XIJ-RS-AyX">
+                        <barButtonItem key="leftBarButtonItem" id="XIJ-RS-AyX">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="dTm-oi-pbF">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGZ-ES-z0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-589.60000000000002" y="801.72413793103453"/>
+            <point key="canvasLocation" x="-591" y="1067"/>
         </scene>
         <!--Station View Controller-->
         <scene sceneID="Cgx-5b-40b">
