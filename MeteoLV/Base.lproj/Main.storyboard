@@ -52,14 +52,10 @@
                         <viewLayoutGuide key="safeArea" id="3Mo-48-ZCx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho">
-                        <barButtonItem key="leftBarButtonItem" id="XIJ-RS-AyX">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="dTm-oi-pbF">
-                                <rect key="frame" x="16" y="11" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="heC-P8-Txv" kind="show" identifier="info" id="1Ej-MK-qmT"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="XIJ-RS-AyX">
+                            <connections>
+                                <segue destination="heC-P8-Txv" kind="show" identifier="info" id="A4q-rf-vvb"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ab5-TJ-zTG">
                             <connections>
@@ -116,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGZ-ES-z0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="1067"/>
+            <point key="canvasLocation" x="-590" y="822"/>
         </scene>
         <!--Station View Controller-->
         <scene sceneID="Cgx-5b-40b">
