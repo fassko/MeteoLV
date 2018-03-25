@@ -19,15 +19,27 @@ platform :ios do
 
   desc "CI build"
   lane :ci_build do
-    certificates
-
     # Test
     scan(
       workspace: "MeteoLV.xcworkspace",
 			scheme: "MeteoLV",
 			clean: true,
       device: "iPhone X",
-      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO"
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO",
+      configuration: "Debug"
+    )
+  end
+
+  desc "UI tests"
+  lane :test do
+    # Test
+    scan(
+      workspace: "MeteoLV.xcworkspace",
+			scheme: "MeteoLV",
+			clean: true,
+      device: "iPhone X",
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO",
+      configuration: "Debug"
     )
   end
 
