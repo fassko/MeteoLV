@@ -9,27 +9,28 @@ platform :ios do
     match(type: "appstore")
     match(type: "development")
   end
-  
+
   lane :generate_icon do
     appicon(appicon_image_file: 'Icon.png',
       appicon_devices: [:ipad, :iphone, :ios_marketing],
-      appicon_path: 'MeteoLV/Assets.xcassets' 
+      appicon_path: 'MeteoLV/Assets.xcassets'
     )
   end
-  
+
   desc "CI build"
   lane :ci_build do
     certificates
-    
+
     # Test
     scan(
       workspace: "MeteoLV.xcworkspace",
 			scheme: "MeteoLV",
 			clean: true,
-      device: "iPhone X"
-    ) 
+      device: "iPhone X",
+      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO"
+    )
   end
-  
+
   desc "Circle CI lane"
   lane :circleci do
     setup_circle_ci
@@ -41,7 +42,7 @@ platform :ios do
     setup_travis
     ci_build
   end
-  
+
   lane :build do
     increment_build_number build_number: get_version_number + "." + Time.new.strftime("%y%m%d.%H%M")
 
@@ -55,7 +56,7 @@ platform :ios do
       include_symbols: true
     )
   end
-  
+
   lane :beta do
     build
     testflight(
@@ -67,7 +68,7 @@ platform :ios do
     build
     upload_to_app_store
   end
-  
+
   desc "Deploy a new version to the App Store"
   lane :release_github do
     ensure_git_branch
@@ -84,7 +85,7 @@ platform :ios do
     )
     sh("git fetch --tags")
   end
-  
+
   desc "Download dSYMs and upload to Testflight"
   lane :dsyms do
     download_dsyms(
