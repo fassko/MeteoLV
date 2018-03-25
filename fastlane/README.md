@@ -31,6 +31,11 @@ fastlane ios generate_icon
 fastlane ios ci_build
 ```
 CI build
+### ios test
+```
+fastlane ios test
+```
+UI tests
 ### ios circleci
 ```
 fastlane ios circleci

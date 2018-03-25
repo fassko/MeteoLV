@@ -84,7 +84,7 @@ class MeteoLVUITests: XCTestCase {
       let gaissCell = parametersTable.cells.staticTexts["Gaiss"]
       let virsmaCell = parametersTable.cells.staticTexts["Virsma"]
       let mitrumsCell = parametersTable.cells.staticTexts["Mitrums"]
-      let vejsCell = parametersTable.cells.staticTexts["Vejš"]
+      let vejsCell = parametersTable.cells.staticTexts["Vējš"]
       
       XCTAssertTrue(waitForElementToAppear(gaissCell))
       XCTAssertTrue(waitForElementToAppear(virsmaCell))
