@@ -1,4 +1,3 @@
-* added Latvian State Roads data
-* UI improvements
+Fixed Latvian roads data.
 
 Thank you for using this application!
