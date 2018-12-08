@@ -2,7 +2,7 @@ PODS:
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Fabric (1.9.0)
-  - MeteoLVProvider (0.1.3):
+  - MeteoLVProvider (0.2.1):
     - SwiftSoup (~> 1.7)
   - SwiftLint (0.29.1)
   - SwiftSoup (1.7.4)
@@ -24,7 +24,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  MeteoLVProvider: 0c5dd0aeb97adfdac821b703e6e91f3c81a6ba8b
+  MeteoLVProvider: 3414505ae2dcbf6c26e21441c31a69f034af62b0
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 

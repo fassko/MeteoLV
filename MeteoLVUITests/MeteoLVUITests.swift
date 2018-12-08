@@ -77,7 +77,7 @@ class MeteoLVUITests: XCTestCase {
     XCTAssertTrue(visibilityCell.waitForExistence(timeout: 1))
     XCTAssertTrue(visibilityValue.waitForExistence(timeout: 1))
     
-    takeScreenShot("Observation_Data_\(stationName)")
+    takeScreenShot("meteo_lv_station_\(stationName)")
 
     let backButton = navigationBar.buttons["Novērojumi"].firstMatch
     backButton.tap()
@@ -89,16 +89,33 @@ class MeteoLVUITests: XCTestCase {
       ])
     launchApp()
     
+    let stationName = "Strenči"
+    let navigationBar = app.navigationBars[stationName]
+    
     let parametersTable = app.tables.firstMatch
+    
     let gaissCell = parametersTable.cells.staticTexts["Gaiss"]
-    let virsmaCell = parametersTable.cells.staticTexts["Virsma"]
+    let gaissValue = parametersTable.cells.staticTexts["-0.8°C"]
+    
     let mitrumsCell = parametersTable.cells.staticTexts["Mitrums"]
+    let mitrumsValue = parametersTable.cells.staticTexts["100%"]
+    
     let vejsCell = parametersTable.cells.staticTexts["Vējš"]
+    let vejsValue = parametersTable.cells.staticTexts["0m/s"]
     
     XCTAssertTrue(gaissCell.waitForExistence(timeout: 1))
-    XCTAssertTrue(virsmaCell.waitForExistence(timeout: 1))
+    XCTAssertTrue(gaissValue.waitForExistence(timeout: 1))
+    
     XCTAssertTrue(mitrumsCell.waitForExistence(timeout: 1))
+    XCTAssertTrue(mitrumsValue.waitForExistence(timeout: 1))
+    
     XCTAssertTrue(vejsCell.waitForExistence(timeout: 1))
+    XCTAssertTrue(vejsValue.waitForExistence(timeout: 1))
+    
+    takeScreenShot("LV_road_Station_\(stationName)")
+    
+    let backButton = navigationBar.buttons["Novērojumi"].firstMatch
+    backButton.tap()
   }
   
   func testAppRun() {
@@ -144,6 +161,7 @@ class MeteoLVUITests: XCTestCase {
   
   func testTapLVRoad() {
     launchApp()
+    
     runWithStation("Strenči")
   }
   
@@ -163,6 +181,7 @@ class MeteoLVUITests: XCTestCase {
     XCTAssertTrue(annotation.waitForExistence(timeout: 1))
     
     takeScreenShot("Observation_Data_\(stationName)")
+    
   }
   
   fileprivate func takeScreenShot(_ name: String) {

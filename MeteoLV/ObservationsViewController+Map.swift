@@ -31,12 +31,7 @@ extension ObservationsViewController: MKMapViewDelegate {
     view.displayPriority = .required
     
     if let stationAnnotation = view.annotation as? StationAnnotation {
-      switch stationAnnotation.station {
-      case .meteo:
-        view.markerTintColor = UIColor(red: 0.05, green: 0.29, blue: 0.53, alpha: 1.0)
-      case .road:
-        view.markerTintColor = .lightGray
-      }
+      view.markerTintColor = stationAnnotation.tintColor
     }
     
     return view
@@ -44,12 +39,11 @@ extension ObservationsViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                calloutAccessoryControlTapped control: UIControl) {
-    
-    guard let station = view.annotation as? StationAnnotation else {
+    guard let stationAnnotation = view.annotation as? StationAnnotation else {
       return
     }
     
-    coordinator?.showObservationStation(station.station)
+    coordinator?.showObservationStation(stationAnnotation.station)
     mapView.deselectAnnotation(view.annotation, animated: true)
   }
 }

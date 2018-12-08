@@ -13,8 +13,6 @@ import MeteoLVProvider
 
 /// Station annoation
 class StationAnnotation: MKPointAnnotation, UIAccessibilityIdentification {
-  
-  /// Accesibility identifier
   var accessibilityIdentifier: String?
   
   /// Observation station
@@ -28,5 +26,16 @@ class StationAnnotation: MKPointAnnotation, UIAccessibilityIdentification {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+}
+
+extension StationAnnotation {
+  var tintColor: UIColor {
+    switch self.station {
+    case .meteo:
+      return Constants.meteoLVTintColor
+    case .road:
+      return Constants.roadsTintColor
+    }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "attributes": {
+    "LVC_CMS.dbo.view_cms_statuss.nosaukums": "Strenči",
+    "GIS.DBO.LVC_CMS.Y": 57.651187999999998,
+    "GIS.DBO.LVC_CMS.X": 25.863773160000001,
+    "LVC_CMS.dbo.view_cms_statuss.CMS_STATUS": "Gaiss:<font style='font-size:12px;'><div class='wi wi-thermometer'></div> -0.8°C </font> <br/>Mitrums:<font style='font-size:12px;'><div class='wi wi-humidity'></div> 100% </font><br/>Vējš:<font style='font-size:12px;'><div class='wi wi-wind'></div> 0m/s</font>",
+    "GIS.DBO.LVC_CMS.STATION": "LV17",
+    "LVC_CMS.dbo.view_cms_statuss.acid": "A3",
+    "LVC_CMS.dbo.view_cms_statuss.km": 102
+  },
+  "geometry": {
+    "x": 25.863773167000033,
+    "y": 57.65118800700003
+  }
+  }
