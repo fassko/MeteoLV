@@ -10,8 +10,6 @@ import XCTest
 
 class MeteoLVUITests: XCTestCase {
   
-  /// Screenshot counter
-  var counter = 0
   let app = XCUIApplication()
   
   override func setUp() {
@@ -77,7 +75,7 @@ class MeteoLVUITests: XCTestCase {
     XCTAssertTrue(visibilityCell.waitForExistence(timeout: 1))
     XCTAssertTrue(visibilityValue.waitForExistence(timeout: 1))
     
-    takeScreenShot("meteo_lv_station_\(stationName)")
+    takeScreenShot("meteo_lv_station_\(stationName)", counter: 4)
 
     let backButton = navigationBar.buttons["Novērojumi"].firstMatch
     backButton.tap()
@@ -112,7 +110,7 @@ class MeteoLVUITests: XCTestCase {
     XCTAssertTrue(vejsCell.waitForExistence(timeout: 1))
     XCTAssertTrue(vejsValue.waitForExistence(timeout: 1))
     
-    takeScreenShot("LV_road_Station_\(stationName)")
+    takeScreenShot("LV_road_Station_\(stationName)", counter: 4)
     
     let backButton = navigationBar.buttons["Novērojumi"].firstMatch
     backButton.tap()
@@ -121,7 +119,7 @@ class MeteoLVUITests: XCTestCase {
   func testAppRun() {
     launchApp()
     
-    takeScreenShot("MainScreen")
+    takeScreenShot("MainScreen", counter: 1)
 
     let observationsNavigationbar = app.navigationBars["Novērojumi"].firstMatch
     XCTAssertTrue(waitForElementToAppear(observationsNavigationbar))
@@ -132,8 +130,6 @@ class MeteoLVUITests: XCTestCase {
     refreshButton.tap()
 
     sleep(3)
-
-    takeScreenShot("RefreshedMainScreen")
   }
   
   func testInfoView() {
@@ -147,7 +143,7 @@ class MeteoLVUITests: XCTestCase {
     XCTAssertTrue(app.images["Logo"].exists)
     XCTAssertTrue(app.textViews["Description"].exists)
     
-    takeScreenShot("InfoScreen")
+    takeScreenShot("InfoScreen", counter: 6)
     
     let backButton = navigationBar.buttons["Novērojumi"].firstMatch
     backButton.tap()
@@ -156,13 +152,13 @@ class MeteoLVUITests: XCTestCase {
   func testTapMeteoLV() {
     launchApp()
     
-    runWithStation("Rūjiena")
+    runWithStation("Rūjiena", counter: 2)
   }
   
   func testTapLVRoad() {
     launchApp()
     
-    runWithStation("Strenči")
+    runWithStation("Strenči", counter: 3)
   }
   
   private func launchApp() {
@@ -171,7 +167,7 @@ class MeteoLVUITests: XCTestCase {
     sleep(5)
   }
   
-  private func runWithStation(_ stationName: String) {
+  private func runWithStation(_ stationName: String, counter: Int) {
     
     let predicate = NSPredicate(format: "label BEGINSWITH '\(stationName)'")
     let annotation = app.otherElements.matching(predicate).element(boundBy: 0)
@@ -180,12 +176,11 @@ class MeteoLVUITests: XCTestCase {
     
     XCTAssertTrue(annotation.waitForExistence(timeout: 1))
     
-    takeScreenShot("Observation_Data_\(stationName)")
+    takeScreenShot("Observation_Data_\(stationName)", counter: counter)
     
   }
   
-  fileprivate func takeScreenShot(_ name: String) {
+  fileprivate func takeScreenShot(_ name: String, counter: Int) {
     snapshot("\(String(format: "%02d", counter))_\(name)")
-    counter += 1
   }
 }
