@@ -16,19 +16,6 @@ platform :ios do
     )
   end
 
-  desc "CI build"
-  lane :ci_build do
-    # Test
-    scan(
-      workspace: "MeteoLV.xcworkspace",
-			scheme: "MeteoLV",
-			clean: true,
-      device: "iPhone X",
-      xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO",
-      configuration: "Debug"
-    )
-  end
-
   desc "UI tests"
   lane :test do
     # Test
@@ -40,18 +27,6 @@ platform :ios do
       xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO",
       configuration: "Debug"
     )
-  end
-
-  desc "Circle CI lane"
-  lane :circleci do
-    setup_circle_ci
-    ci_build
-  end
-
-  desc "Travis lane"
-  lane :travis do
-    setup_travis
-    ci_build
   end
 
   lane :build do
@@ -73,6 +48,10 @@ platform :ios do
     testflight(
       skip_waiting_for_build_processing: true
     )
+  end
+
+  lane :screenshots do
+    snapshot
   end
 
   lane :release do

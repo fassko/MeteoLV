@@ -1,0 +1,51 @@
+{
+  "id": "RIRU99PA",
+  "name": "Rūjiena",
+  "latitude": 57.8867,
+  "longitude": 25.3717,
+  "icon": null,
+  "iconTitle": null,
+  "temperature": "+0,6",
+  "parameters": [
+    {
+      "name": "Temperatūra (°C)",
+      "parameterId": "121",
+      "value": "+ 0,6"
+    },
+    {
+      "name": "Vēja virziens",
+      "parameterId": "117",
+      "value": "ZA"
+    },
+    {
+      "name": "Vēja ātrums (m/s)",
+      "parameterId": "113",
+      "value": "3/5"
+    },
+    {
+      "name": "Mitrums (%)",
+      "parameterId": "114",
+      "value": "90"
+    },
+    {
+      "name": "Spiediens (mm Hg)",
+      "parameterId": "118",
+      "value": "768,2"
+    },
+    {
+      "name": "Nokrišņi (mm)",
+      "parameterId": "119",
+      "value": null
+    },
+    {
+      "name": "Sniegs (cm)",
+      "parameterId": "120",
+      "value": "0"
+    },
+    {
+      "name": "Redzamība (m)",
+      "parameterId": "116",
+      "value": "20000"
+    }
+  ]
+}

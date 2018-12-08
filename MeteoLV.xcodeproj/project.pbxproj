@@ -14,8 +14,17 @@
 		6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9A2039EF16007C268C /* ObservationsViewController.swift */; };
 		6300DC9F2039F889007C268C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9E2039F889007C268C /* StationViewController.swift */; };
 		6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DCA02039FA08007C268C /* StationAnnotation.swift */; };
+		631E462421BBEFB2000CC546 /* ObservationsViewController+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */; };
+		631E462621BBF287000CC546 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462521BBF287000CC546 /* Constants.swift */; };
+		631E462821BBF633000CC546 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462721BBF633000CC546 /* OSLog.swift */; };
+		631E462A21BC0D93000CC546 /* meteoLVStation.json in Resources */ = {isa = PBXBuildFile; fileRef = 631E462921BC0D93000CC546 /* meteoLVStation.json */; };
+		631E462C21BC0DB1000CC546 /* roadLVStation.json in Resources */ = {isa = PBXBuildFile; fileRef = 631E462B21BC0DB1000CC546 /* roadLVStation.json */; };
+		631E462E21BC0DD6000CC546 /* ObservationsViewController+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */; };
 		635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
 		635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524F3205E5E6700EC0E23 /* InfoViewController.swift */; };
+		638E119821860AFC00F20159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119721860AFC00F20159 /* Coordinator.swift */; };
+		638E119A21860B2700F20159 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119921860B2700F20159 /* Storyboarded.swift */; };
+		638E119C21860B5E00F20159 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MainCoordinator.swift */; };
 		63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */; };
 		63F024422045E7D200C07D89 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024412045E7D200C07D89 /* XCTest+Extensions.swift */; };
 		63F024442045EB6B00C07D89 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024432045EB6B00C07D89 /* SnapshotHelper.swift */; };
@@ -41,8 +50,17 @@
 		6300DC9A2039EF16007C268C /* ObservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewController.swift; sourceTree = "<group>"; };
 		6300DC9E2039F889007C268C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		6300DCA02039FA08007C268C /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
+		631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+Map.swift"; sourceTree = "<group>"; };
+		631E462521BBF287000CC546 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		631E462721BBF633000CC546 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		631E462921BC0D93000CC546 /* meteoLVStation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = meteoLVStation.json; sourceTree = "<group>"; };
+		631E462B21BC0DB1000CC546 /* roadLVStation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = roadLVStation.json; sourceTree = "<group>"; };
+		631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+UITests.swift"; sourceTree = "<group>"; };
 		635524EE205E56A700EC0E23 /* ObservationsStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsStation.swift; sourceTree = "<group>"; };
 		635524F3205E5E6700EC0E23 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		638E119721860AFC00F20159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		638E119921860B2700F20159 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		638E119B21860B5E00F20159 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		63E09918203A0C3900959498 /* MeteoLVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoLVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLVUITests.swift; sourceTree = "<group>"; };
 		63E0991C203A0C3A00959498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,18 +131,41 @@
 		6300DC872039ED7D007C268C /* MeteoLV */ = {
 			isa = PBXGroup;
 			children = (
-				6300DC882039ED7D007C268C /* AppDelegate.swift */,
+				631E462121BBED9C000CC546 /* Core */,
 				635524EE205E56A700EC0E23 /* ObservationsStation.swift */,
 				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
 				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
+				631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */,
+				631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */,
 				6300DC9E2039F889007C268C /* StationViewController.swift */,
 				635524F3205E5E6700EC0E23 /* InfoViewController.swift */,
-				6300DC8C2039ED7D007C268C /* Main.storyboard */,
-				6300DC912039ED7D007C268C /* LaunchScreen.storyboard */,
+				631E462221BBEDAE000CC546 /* Storyboards */,
 				6300DC942039ED7D007C268C /* Info.plist */,
 				63F1F7EE2046069400305DF7 /* Assets.xcassets */,
 			);
 			path = MeteoLV;
+			sourceTree = "<group>";
+		};
+		631E462121BBED9C000CC546 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6300DC882039ED7D007C268C /* AppDelegate.swift */,
+				638E119721860AFC00F20159 /* Coordinator.swift */,
+				638E119921860B2700F20159 /* Storyboarded.swift */,
+				638E119B21860B5E00F20159 /* MainCoordinator.swift */,
+				631E462521BBF287000CC546 /* Constants.swift */,
+				631E462721BBF633000CC546 /* OSLog.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		631E462221BBEDAE000CC546 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6300DC8C2039ED7D007C268C /* Main.storyboard */,
+				6300DC912039ED7D007C268C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		63E09919203A0C3A00959498 /* MeteoLVUITests */ = {
@@ -134,6 +175,8 @@
 				63F024412045E7D200C07D89 /* XCTest+Extensions.swift */,
 				63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */,
 				63E0991C203A0C3A00959498 /* Info.plist */,
+				631E462921BC0D93000CC546 /* meteoLVStation.json */,
+				631E462B21BC0DB1000CC546 /* roadLVStation.json */,
 			);
 			path = MeteoLVUITests;
 			sourceTree = "<group>";
@@ -150,7 +193,6 @@
 				6300DC822039ED7D007C268C /* Frameworks */,
 				6300DC832039ED7D007C268C /* Resources */,
 				EF2C85ED5CFB5883A39AD9FC /* [CP] Embed Pods Frameworks */,
-				7A838B3ADCF4F886844CB842 /* [CP] Copy Pods Resources */,
 				63EC843F204495740073749B /* Swiftlint */,
 				63F1F7F020460A7900305DF7 /* Fabric */,
 			);
@@ -188,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = fassko;
 				TargetAttributes = {
 					6300DC842039ED7D007C268C = {
@@ -197,6 +239,7 @@
 					};
 					63E09917203A0C3900959498 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 						TestTargetID = 6300DC842039ED7D007C268C;
 					};
@@ -227,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6300DC932039ED7D007C268C /* LaunchScreen.storyboard in Resources */,
+				631E462A21BC0D93000CC546 /* meteoLVStation.json in Resources */,
 				63F1F7EF2046069500305DF7 /* Assets.xcassets in Resources */,
+				631E462C21BC0DB1000CC546 /* roadLVStation.json in Resources */,
 				6300DC8E2039ED7D007C268C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,21 +315,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 34be06edc6f733a743335744b07a23f6a3e5b344 a9207ff06b3417aa4bf8c6408432761ca87c5b52dca8f2365b133eea61d407cc";
 		};
-		7A838B3ADCF4F886844CB842 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C3D744013C4C799D8FD15F77 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,7 +339,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MeteoLVProvider/MeteoLVProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
@@ -320,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -331,11 +361,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6300DC9F2039F889007C268C /* StationViewController.swift in Sources */,
+				631E462621BBF287000CC546 /* Constants.swift in Sources */,
+				631E462821BBF633000CC546 /* OSLog.swift in Sources */,
 				635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */,
+				631E462421BBEFB2000CC546 /* ObservationsViewController+Map.swift in Sources */,
 				6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */,
 				6300DC892039ED7D007C268C /* AppDelegate.swift in Sources */,
 				635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */,
 				6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */,
+				631E462E21BC0DD6000CC546 /* ObservationsViewController+UITests.swift in Sources */,
+				638E119821860AFC00F20159 /* Coordinator.swift in Sources */,
+				638E119C21860B5E00F20159 /* MainCoordinator.swift in Sources */,
+				638E119A21860B2700F20159 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +430,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -400,6 +438,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -410,7 +449,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.2.180325.1625;
+				CURRENT_PROJECT_VERSION = 1.4.181208.1926;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -451,6 +490,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -458,6 +498,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -468,7 +509,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.2.180325.1625;
+				CURRENT_PROJECT_VERSION = 1.4.181208.1926;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -494,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2.180325.1625;
+				CURRENT_PROJECT_VERSION = 1.4.181208.1926;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
@@ -504,7 +545,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cb952d6d-f68f-4a35-ad73-81be9d46c861";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -516,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2.180325.1625;
+				CURRENT_PROJECT_VERSION = 1.4.181208.1926;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -525,7 +566,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "53733216-fea9-43ff-991c-22ab35b48155";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.fassko.MeteoLV";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -542,7 +583,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLVUITests";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeteoLV;
 			};
@@ -560,7 +601,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLVUITests";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeteoLV;
 			};

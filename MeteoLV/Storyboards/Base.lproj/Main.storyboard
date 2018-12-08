@@ -1,42 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r7z-Tr-Ler">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="ZPQ-X5-vmi">
-            <objects>
-                <navigationController id="r7z-Tr-Ler" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o0R-tk-ptP">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="i7w-ef-Q9R" kind="relationship" relationship="rootViewController" id="ggr-5A-hk6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-8C-iUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1319" y="87"/>
-        </scene>
         <!--Novērojumi-->
         <scene sceneID="a0q-5r-NGn">
             <objects>
-                <viewController id="i7w-ef-Q9R" customClass="ObservationsViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ObservationsViewController" id="i7w-ef-Q9R" customClass="ObservationsViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryt-Vh-gsN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JDu-ve-jtc">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDu-ve-jtc">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <connections>
                                     <outlet property="delegate" destination="i7w-ef-Q9R" id="grd-S9-vNm"/>
                                 </connections>
@@ -51,21 +34,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Mo-48-ZCx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho">
-                        <barButtonItem key="leftBarButtonItem" title="Info" id="XIJ-RS-AyX">
-                            <connections>
-                                <segue destination="heC-P8-Txv" kind="show" identifier="info" id="A4q-rf-vvb"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ab5-TJ-zTG">
-                            <connections>
-                                <action selector="refreshObservations:" destination="i7w-ef-Q9R" id="0mh-bP-XnJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Novērojumi" id="CUN-yq-0ho"/>
                     <connections>
                         <outlet property="mapView" destination="JDu-ve-jtc" id="ZJQ-5A-ks8"/>
-                        <segue destination="kg8-nm-Ie8" kind="show" identifier="station" id="D1W-Z7-4vU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fU-ie-ils" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,34 +46,34 @@
         <!--Info-->
         <scene sceneID="es2-IU-uPS">
             <objects>
-                <viewController title="Info" id="heC-P8-Txv" customClass="InfoViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" title="Info" id="heC-P8-Txv" customClass="InfoViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ax-2O-KgN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-qJ-hur">
-                                <rect key="frame" x="75" y="104" width="225" height="191"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fz0-qJ-hur" secondAttribute="height" multiplier="225:191" id="57E-4p-Dd3"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l3R-nr-Nn0">
-                                <rect key="frame" x="16" y="303" width="343" height="475"/>
+                                <rect key="frame" x="16" y="264" width="343" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAR-7d-lVI">
+                                <rect key="frame" x="89.666666666666686" y="60" width="196" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="HcL-w4-MKD"/>
+                                    <constraint firstAttribute="width" constant="196" id="RKt-sN-hWn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fz0-qJ-hur" firstAttribute="centerX" secondItem="5ax-2O-KgN" secondAttribute="centerX" id="Cf7-Bj-hlL"/>
                             <constraint firstItem="l3R-nr-Nn0" firstAttribute="leading" secondItem="vDG-B0-EFj" secondAttribute="leading" constant="16" id="Fwd-y8-bIj"/>
-                            <constraint firstItem="fz0-qJ-hur" firstAttribute="width" secondItem="vDG-B0-EFj" secondAttribute="width" multiplier="0.6" id="HYJ-99-fEw"/>
-                            <constraint firstItem="fz0-qJ-hur" firstAttribute="top" secondItem="vDG-B0-EFj" secondAttribute="top" constant="16" id="JGz-HP-MIt"/>
-                            <constraint firstItem="l3R-nr-Nn0" firstAttribute="top" secondItem="fz0-qJ-hur" secondAttribute="bottom" constant="8" id="Sjz-ak-xjd"/>
                             <constraint firstItem="l3R-nr-Nn0" firstAttribute="bottom" secondItem="vDG-B0-EFj" secondAttribute="bottom" id="a2G-Ui-uSO"/>
+                            <constraint firstItem="l3R-nr-Nn0" firstAttribute="top" secondItem="NAR-7d-lVI" secondAttribute="bottom" constant="8" id="ko3-cf-uVs"/>
                             <constraint firstItem="vDG-B0-EFj" firstAttribute="trailing" secondItem="l3R-nr-Nn0" secondAttribute="trailing" constant="16" id="tgU-cJ-Nro"/>
+                            <constraint firstItem="NAR-7d-lVI" firstAttribute="top" secondItem="vDG-B0-EFj" secondAttribute="top" constant="16" id="ugI-AK-FKf"/>
+                            <constraint firstItem="NAR-7d-lVI" firstAttribute="centerX" secondItem="5ax-2O-KgN" secondAttribute="centerX" id="unm-2K-fLi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vDG-B0-EFj"/>
                     </view>
@@ -112,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGZ-ES-z0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="822"/>
+            <point key="canvasLocation" x="-591.20000000000005" y="821.67487684729065"/>
         </scene>
         <!--Station View Controller-->
         <scene sceneID="Cgx-5b-40b">
             <objects>
-                <tableViewController id="kg8-nm-Ie8" customClass="StationViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StationViewController" id="kg8-nm-Ie8" customClass="StationViewController" customModule="MeteoLV" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zlb-ni-C92">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,9 +109,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LRn-rW-4du">
-                                            <rect key="frame" x="315" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <rect key="frame" x="311.33333333333331" y="11.999999999999998" width="47.666666666666664" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -160,6 +131,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="321" height="308"/>
+        <image name="Logo" width="196" height="196"/>
     </resources>
 </document>

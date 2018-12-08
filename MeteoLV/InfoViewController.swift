@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+class InfoViewController: UIViewController, Storyboarded {
   
   @IBOutlet weak var infoTextView: UITextView!
   
@@ -17,9 +17,10 @@ class InfoViewController: UIViewController {
   
     //swiftlint:disable line_length
     infoTextView.text = """
-      Meteo Latvia shows current weather observations in Latvia. Data comes from Latvian Environment, Geology and Meteorology Centre and Latvian State Roads.
+      Weather Latvia shows current weather observations in Latvia. Data comes from Latvian Environment, Geology and Meteorology Centre and Latvian State Roads.
     
       App is maintained by Kristaps Grinbergs and open sourced at https://github.com/fassko/MeteoLV
     """
+    infoTextView.accessibilityLabel = "Description"
   }
 }

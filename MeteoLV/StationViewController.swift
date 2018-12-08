@@ -10,9 +10,8 @@ import UIKit
 
 import MeteoLVProvider
 
-class StationViewController: UITableViewController {
+class StationViewController: UITableViewController, Storyboarded {
 
-  /// Observation station
   var station: ObservationStation!
 
   override func viewDidLoad() {
@@ -36,7 +35,6 @@ extension StationViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "stationCell", for: indexPath)
 
     let parameter = station.parameters[indexPath.row]
-
     cell.textLabel?.text = parameter["name"]
     cell.detailTextLabel?.text = parameter["value"]
     

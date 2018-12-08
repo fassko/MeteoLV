@@ -1,11 +1,11 @@
 PODS:
-  - Crashlytics (3.10.1):
-    - Fabric (~> 1.7.5)
-  - Fabric (1.7.6)
-  - MeteoLVProvider (0.1.2):
-    - SwiftSoup (~> 1.6)
-  - SwiftLint (0.25.0)
-  - SwiftSoup (1.6.4)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
+  - MeteoLVProvider (0.2.1):
+    - SwiftSoup (~> 1.7)
+  - SwiftLint (0.29.1)
+  - SwiftSoup (1.7.4)
 
 DEPENDENCIES:
   - Crashlytics
@@ -13,13 +13,21 @@ DEPENDENCIES:
   - MeteoLVProvider
   - SwiftLint
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+    - MeteoLVProvider
+    - SwiftLint
+    - SwiftSoup
+
 SPEC CHECKSUMS:
-  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
-  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
-  MeteoLVProvider: 9a4aa71c75952ae943a9331cb2e6427770d793d0
-  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
-  SwiftSoup: 861cca763c13fe9957a615cd382b4006406f2557
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  MeteoLVProvider: 3414505ae2dcbf6c26e21441c31a69f034af62b0
+  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
+  SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
 
 PODFILE CHECKSUM: e48ed91fa07f1e2844fc57fe325efaf347f67b8d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.0.beta.2
