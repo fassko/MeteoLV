@@ -4,10 +4,10 @@
 
 App Store link: https://itunes.apple.com/us/app/weather-latvia/id1350252673?ls=1&mt=8
 
-![Main Screen](screenshots/iPhone XS-01_MainScreen.png)
+![Main Screen](screenshots/main-screen.png)
 
-![Rūjiena](screenshots/iPhone XS-02_Observation_Data_Rūjiena.png)
+![Rūjiena](screenshots/clicked-station.png)
 
-![Strenči](screenshots/iPhone XS-04_LV_road_Station_Strenči.png)
+![Strenči](screenshots/strenci.png)
 
-![Rūjiena](screenshots/iPhone XS-04_meteo_lv_station_Rūjiena.png)
+![Rūjiena](screenshots/rujiena.png)
