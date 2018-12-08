@@ -10,7 +10,6 @@ import Foundation
 
 import MeteoLVProvider
 
-// MARK: - UI tests
 extension ObservationsViewController {
   internal func runUITests() {
     if CommandLine.arguments.contains("-meteoLVStation") {

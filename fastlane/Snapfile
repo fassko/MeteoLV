@@ -1,6 +1,4 @@
 devices([
-  "iPhone SE",
-  "iPhone 8",
   "iPhone 8 Plus",
   "iPhone XS",
   "iPhone XS Max"
@@ -10,8 +8,8 @@ languages([
   "en-US"
 ])
 
-scheme("MeteoLV")
+scheme "MeteoLV"
 
-clear_previous_screenshots(true)
+clear_previous_screenshots true
 
 workspace "./MeteoLV.xcworkspace"

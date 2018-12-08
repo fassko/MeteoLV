@@ -9,7 +9,6 @@
 import Foundation
 import MapKit
 
-// MARK: - MapView delegate methods
 extension ObservationsViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

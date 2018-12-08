@@ -51,9 +51,6 @@ class ObservationsViewController: UIViewController, Storyboarded {
                                                         action: #selector(refreshObservations(_:)))
   }
   
-  /**
-    Load observations
-  */
   private func loadObservations() {
     meteoDataProvider.observations { result in
       switch result {
@@ -78,9 +75,6 @@ class ObservationsViewController: UIViewController, Storyboarded {
     }
   }
   
-  /**
-   Load Latvian roads observation
-  */
   private func loadLatvianRoadsObservations() {
     meteoDataProvider.latvianRoadsObservations { result in
       switch result {
