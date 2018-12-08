@@ -10,9 +10,8 @@ import UIKit
 
 import MeteoLVProvider
 
-class StationViewController: UITableViewController {
+class StationViewController: UITableViewController, Storyboarded {
 
-  /// Observation station
   var station: ObservationStation!
 
   override func viewDidLoad() {

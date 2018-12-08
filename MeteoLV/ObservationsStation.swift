@@ -38,7 +38,7 @@ enum ObservationStation {
         return []
       }
       
-      return meteoStationParams.flatMap({ parameter -> [String: String]? in
+      return meteoStationParams.compactMap { parameter -> [String: String]? in
         guard let value = parameter.value else {
           return nil
         }
@@ -47,7 +47,7 @@ enum ObservationStation {
           "name": parameter.name,
           "value": value
         ]
-      }).map({ $0 })
+      }.map { $0 }
       
     case let .road(roadStation):
       
