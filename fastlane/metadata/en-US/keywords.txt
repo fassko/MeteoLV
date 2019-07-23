@@ -1,1 +1,1 @@
-latvia,latvija,meteo,weather,laiks,laikapstākļi,novērojumi,lietus,temperatūra
+latvia,latvija,meteo,weather,laiks,laikapstākļi,novērojumi,lietus,temperatūra,temperature,laiks
