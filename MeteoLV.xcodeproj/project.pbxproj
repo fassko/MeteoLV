@@ -58,6 +58,7 @@
 		631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+UITests.swift"; sourceTree = "<group>"; };
 		635524EE205E56A700EC0E23 /* ObservationsStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsStation.swift; sourceTree = "<group>"; };
 		635524F3205E5E6700EC0E23 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		6386C76E236CC0E0000FC508 /* MeteoLV.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeteoLV.xctestplan; sourceTree = "<group>"; };
 		638E119721860AFC00F20159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		638E119921860B2700F20159 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		638E119B21860B5E00F20159 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		6300DC7C2039ED7D007C268C = {
 			isa = PBXGroup;
 			children = (
+				6386C76E236CC0E0000FC508 /* MeteoLV.xctestplan */,
 				6300DC872039ED7D007C268C /* MeteoLV */,
 				63E09919203A0C3A00959498 /* MeteoLVUITests */,
 				6300DC862039ED7D007C268C /* Products */,

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "172DB75A-BE0C-4F2E-A5AD-DBE8EAEC1A43",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MeteoLV.xcodeproj",
+      "identifier" : "6300DC842039ED7D007C268C",
+      "name" : "MeteoLV"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MeteoLV.xcodeproj",
+        "identifier" : "63E09917203A0C3900959498",
+        "name" : "MeteoLVUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
