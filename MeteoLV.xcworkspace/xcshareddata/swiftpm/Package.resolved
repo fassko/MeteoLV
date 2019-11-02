@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MeteoLVProvider",
+        "repositoryURL": "https://github.com/fassko/MeteoLVProvider",
+        "state": {
+          "branch": "master",
+          "revision": "62cc91d2282731542e0ad5aec2dc8886bf46bbcb",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
+        "state": {
+          "branch": null,
+          "revision": "34a24b6e27fe6302c5b5630325b64adc3e3b5bca",
+          "version": "2.2.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
