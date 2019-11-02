@@ -39,7 +39,7 @@
       </MacroExpansion>
       <TestPlans>
          <TestPlanReference
-            reference = "container:MeteoLV.xctestplan"
+            reference = "container:MeteoLVUITests/MeteoLV.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
