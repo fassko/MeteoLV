@@ -23,7 +23,7 @@ platform :ios do
       workspace: "MeteoLV.xcworkspace",
 			scheme: "MeteoLV",
 			clean: true,
-      device: "iPhone X",
+      device: "iPhone 11 Pro",
       xcargs: "CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO",
       configuration: "Debug"
     )

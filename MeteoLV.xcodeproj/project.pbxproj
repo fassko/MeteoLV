@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53D48D6EC018AC569D93ED25 /* Pods_MeteoLV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F739193A2554C66DA37F55DE /* Pods_MeteoLV.framework */; };
 		6300DC892039ED7D007C268C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC882039ED7D007C268C /* AppDelegate.swift */; };
 		6300DC8E2039ED7D007C268C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6300DC8C2039ED7D007C268C /* Main.storyboard */; };
 		6300DC932039ED7D007C268C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6300DC912039ED7D007C268C /* LaunchScreen.storyboard */; };
@@ -22,6 +21,8 @@
 		631E462E21BC0DD6000CC546 /* ObservationsViewController+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */; };
 		635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
 		635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524F3205E5E6700EC0E23 /* InfoViewController.swift */; };
+		6375AB5A236D6B2600B1D8F4 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 6375AB59236D6B2600B1D8F4 /* MeteoLVProvider */; };
+		6375AB5C236D740400B1D8F4 /* MeteoLV.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */; };
 		638E119821860AFC00F20159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119721860AFC00F20159 /* Coordinator.swift */; };
 		638E119A21860B2700F20159 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119921860B2700F20159 /* Storyboarded.swift */; };
 		638E119C21860B5E00F20159 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MainCoordinator.swift */; };
@@ -58,6 +59,7 @@
 		631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+UITests.swift"; sourceTree = "<group>"; };
 		635524EE205E56A700EC0E23 /* ObservationsStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsStation.swift; sourceTree = "<group>"; };
 		635524F3205E5E6700EC0E23 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MeteoLV.xctestplan; sourceTree = "<group>"; };
 		638E119721860AFC00F20159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		638E119921860B2700F20159 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		638E119B21860B5E00F20159 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -67,9 +69,6 @@
 		63F024412045E7D200C07D89 /* XCTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
 		63F024432045EB6B00C07D89 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		63F1F7EE2046069400305DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.release.xcconfig"; sourceTree = "<group>"; };
-		A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeteoLV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeteoLV/Pods-MeteoLV.debug.xcconfig"; sourceTree = "<group>"; };
-		F739193A2554C66DA37F55DE /* Pods_MeteoLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeteoLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D48D6EC018AC569D93ED25 /* Pods_MeteoLV.framework in Frameworks */,
+				6375AB5A236D6B2600B1D8F4 /* MeteoLVProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,31 +90,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033B7F854099AA330748ACAB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F739193A2554C66DA37F55DE /* Pods_MeteoLV.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2EBFEC84474DEC4D18B5E447 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */,
-				728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6300DC7C2039ED7D007C268C = {
 			isa = PBXGroup;
 			children = (
 				6300DC872039ED7D007C268C /* MeteoLV */,
 				63E09919203A0C3A00959498 /* MeteoLVUITests */,
 				6300DC862039ED7D007C268C /* Products */,
-				2EBFEC84474DEC4D18B5E447 /* Pods */,
-				033B7F854099AA330748ACAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +151,7 @@
 		63E09919203A0C3A00959498 /* MeteoLVUITests */ = {
 			isa = PBXGroup;
 			children = (
+				6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */,
 				63F024432045EB6B00C07D89 /* SnapshotHelper.swift */,
 				63F024412045E7D200C07D89 /* XCTest+Extensions.swift */,
 				63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */,
@@ -188,11 +169,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6300DC972039ED7D007C268C /* Build configuration list for PBXNativeTarget "MeteoLV" */;
 			buildPhases = (
-				C3D744013C4C799D8FD15F77 /* [CP] Check Pods Manifest.lock */,
 				6300DC812039ED7D007C268C /* Sources */,
 				6300DC822039ED7D007C268C /* Frameworks */,
 				6300DC832039ED7D007C268C /* Resources */,
-				EF2C85ED5CFB5883A39AD9FC /* [CP] Embed Pods Frameworks */,
 				63EC843F204495740073749B /* Swiftlint */,
 			);
 			buildRules = (
@@ -200,6 +179,9 @@
 			dependencies = (
 			);
 			name = MeteoLV;
+			packageProductDependencies = (
+				6375AB59236D6B2600B1D8F4 /* MeteoLVProvider */,
+			);
 			productName = MeteoLV;
 			productReference = 6300DC852039ED7D007C268C /* MeteoLV.app */;
 			productType = "com.apple.product-type.application";
@@ -253,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 6300DC7C2039ED7D007C268C;
+			packageReferences = (
+				6375AB58236D6B2600B1D8F4 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */,
+			);
 			productRefGroup = 6300DC862039ED7D007C268C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6375AB5C236D740400B1D8F4 /* MeteoLV.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,44 +285,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which \"swiftlint\" >/dev/null; then\n  \"swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		C3D744013C4C799D8FD15F77 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MeteoLV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF2C85ED5CFB5883A39AD9FC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MeteoLVProvider/MeteoLVProvider.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MeteoLVProvider.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeteoLV/Pods-MeteoLV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -510,7 +458,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -518,7 +467,6 @@
 		};
 		6300DC982039ED7D007C268C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A10A8307A34FC700EF11C6A6 /* Pods-MeteoLV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -527,7 +475,10 @@
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +491,6 @@
 		};
 		6300DC992039ED7D007C268C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 728D7B4AE02137D8F69815AB /* Pods-MeteoLV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -549,7 +499,10 @@
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,7 +520,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLVUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
@@ -585,7 +542,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLVUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1fa8d54d-2496-4a6c-942d-924c9942d199";
@@ -627,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6375AB58236D6B2600B1D8F4 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fassko/MeteoLVProvider";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6375AB59236D6B2600B1D8F4 /* MeteoLVProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6375AB58236D6B2600B1D8F4 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */;
+			productName = MeteoLVProvider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6300DC7D2039ED7D007C268C /* Project object */;
 }
