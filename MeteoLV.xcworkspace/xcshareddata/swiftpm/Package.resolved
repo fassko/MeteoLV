@@ -5,9 +5,9 @@
         "package": "MeteoLVProvider",
         "repositoryURL": "https://github.com/fassko/MeteoLVProvider",
         "state": {
-          "branch": "master",
-          "revision": "62cc91d2282731542e0ad5aec2dc8886bf46bbcb",
-          "version": null
+          "branch": null,
+          "revision": "8a6f1a3743d31aed6e1f80654e173e9cb3457335",
+          "version": "0.5.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
         "state": {
           "branch": null,
-          "revision": "34a24b6e27fe6302c5b5630325b64adc3e3b5bca",
-          "version": "2.2.2"
+          "revision": "21e2a405e19298ad477fc007094db91b6cac08c3",
+          "version": "2.3.1"
         }
       }
     ]

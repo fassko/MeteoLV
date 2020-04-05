@@ -11,7 +11,7 @@ import Foundation
 import MeteoLVProvider
 
 /// Observation station
-enum ObservationStation {
+enum ObservationStation: Comparable, CustomStringConvertible {
   
   /// meteo.lv station
   case meteo(Station)
@@ -27,6 +27,18 @@ enum ObservationStation {
     case let .road(roadStation):
       return roadStation.name
     }
+  }
+  
+  var description: String {
+    name
+  }
+  
+  static func < (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
+    lhs.name < rhs.name
+  }
+  
+  static func == (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
+    lhs.name == rhs.name
   }
   
   /// Weather parameters

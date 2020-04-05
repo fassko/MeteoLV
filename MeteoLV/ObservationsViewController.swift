@@ -26,11 +26,14 @@ class ObservationsViewController: UIViewController, Storyboarded {
     setupNavigationBar()
     setupMap()
     
-    loadObservations()
-    loadLatvianRoadsObservations()
-    
     runUITests()
   }
+  
+  override func viewDidAppear(_ animated: Bool) {
+     super.viewDidAppear(animated)
+     loadObservations()
+     loadLatvianRoadsObservations()
+   }
   
   private func setupMap() {
     let centerCoordinate = CLLocationCoordinate2D(latitude: 56.8800000, longitude: 24.6061111)
@@ -39,9 +42,9 @@ class ObservationsViewController: UIViewController, Storyboarded {
   }
   
   private func setupNavigationBar() {
-    title = "Novērojumi"
+    title = "Map".localized
     
-    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Info",
+    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Info".localized,
                                                        style: .plain,
                                                        target: self,
                                                        action: #selector(info(_:)))
