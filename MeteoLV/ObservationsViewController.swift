@@ -31,8 +31,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
   
   override func viewDidAppear(_ animated: Bool) {
      super.viewDidAppear(animated)
-     loadObservations()
-     loadLatvianRoadsObservations()
+     refreshObservations()
    }
   
   private func setupMap() {
@@ -51,7 +50,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
                                                         target: self,
-                                                        action: #selector(refreshObservations(_:)))
+                                                        action: #selector(refreshObservations))
   }
   
   private func loadObservations() {
@@ -109,7 +108,7 @@ extension ObservationsViewController {
     coordinator?.showInfo()
   }
   
-  @IBAction func refreshObservations(_ sender: Any) {
+  @IBAction func refreshObservations() {
     self.mapView.removeAnnotations(self.mapView.annotations)
     loadObservations()
     loadLatvianRoadsObservations()
