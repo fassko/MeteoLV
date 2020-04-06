@@ -15,8 +15,7 @@ class ListTableViewController: UITableViewController, Storyboarded {
   weak var coordinator: ListCoordinator?
   
   private let meteoDataProvider = MeteoLVProvider()
-  
-  var stations = [ObservationStation]()
+  private var stations = [ObservationStation]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,8 +23,8 @@ class ListTableViewController: UITableViewController, Storyboarded {
     title = "List".localized
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh,
-    target: self,
-    action: #selector(loadData))
+                                                        target: self,
+                                                        action: #selector(loadData))
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -44,9 +43,7 @@ class ListTableViewController: UITableViewController, Storyboarded {
           switch result {
           case .success(let lvRoadsData):
             tmpStationsData.append(contentsOf: lvRoadsData.map { ObservationStation.road($0) })
-            tmpStationsData.sort()
-            
-            self?.stations.append(contentsOf: tmpStationsData)
+            self?.stations.append(contentsOf: tmpStationsData.sorted(by: ==))
             
             DispatchQueue.main.async {
               self?.tableView.reloadData()
@@ -61,8 +58,6 @@ class ListTableViewController: UITableViewController, Storyboarded {
       }
     }
   }
-  
-  // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     1

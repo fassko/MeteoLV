@@ -34,11 +34,28 @@ enum ObservationStation: Comparable, CustomStringConvertible {
   }
   
   static func < (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
-    lhs.name < rhs.name
+    compare(lhs, rhs)
   }
   
   static func == (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
-    lhs.name == rhs.name
+    compare(lhs, rhs)
+  }
+  
+  private static func compare(_ lhs: ObservationStation, _ rhs: ObservationStation) -> Bool {
+    let range = lhs.name.startIndex..<lhs.name.endIndex
+    let comparisonResult = lhs.name.compare(rhs.name,
+                                            options: .caseInsensitive,
+                                            range: range,
+                                            locale: Locale(identifier: "lv_LV"))
+    
+    switch comparisonResult {
+    case .orderedAscending:
+      return true
+    case .orderedSame:
+      return true
+    case .orderedDescending:
+      return false
+    }
   }
   
   /// Weather parameters
