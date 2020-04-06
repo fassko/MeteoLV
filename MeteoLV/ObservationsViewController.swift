@@ -23,11 +23,13 @@ class ObservationsViewController: UIViewController, Storyboarded {
   private var lastUpdateDate: Date?
   
   private var needUpdate: Bool {
-    guard let timeElapsed = lastUpdateDate?.timeIntervalSince(Date()) else {
+    guard let lastUpdateDate = lastUpdateDate else {
       return true
     }
     
-    return timeElapsed > 5 * 60
+    let currentTimestamp = Date()
+    
+    return currentTimestamp.timeIntervalSince(lastUpdateDate) > 5 * 60
   }
   
   override func viewDidLoad() {
@@ -123,14 +125,19 @@ extension ObservationsViewController {
   }
   
   @IBAction func refreshObservations() {
-    self.mapView.removeAnnotations(self.mapView.annotations)
-    
+    removeAnnotations()
     lastUpdateDate = nil
+    
     refreshData()
+  }
+  
+  private func removeAnnotations() {
+    mapView.removeAnnotations(self.mapView.annotations)
   }
   
   private func refreshData() {
     if needUpdate {
+      removeAnnotations()
       loadObservations()
       loadLatvianRoadsObservations()
     }
