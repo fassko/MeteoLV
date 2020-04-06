@@ -20,6 +20,16 @@ class ObservationsViewController: UIViewController, Storyboarded {
   
   private let meteoDataProvider = MeteoLVProvider()
   
+  private var lastUpdateDate: Date?
+  
+  private var needUpdate: Bool {
+    guard let timeElapsed = lastUpdateDate?.timeIntervalSince(Date()) else {
+      return true
+    }
+    
+    return timeElapsed > 5 * 60
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -31,7 +41,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
   
   override func viewDidAppear(_ animated: Bool) {
      super.viewDidAppear(animated)
-     refreshObservations()
+     refreshData()
    }
   
   private func setupMap() {
@@ -54,10 +64,10 @@ class ObservationsViewController: UIViewController, Storyboarded {
   }
   
   private func loadObservations() {
-    meteoDataProvider.observations { result in
+    meteoDataProvider.observations { [weak self] result in
       switch result {
       case let .success(stations):
-        let annoations = stations.map { station -> StationAnnotation in
+        let annotations = stations.map { station -> StationAnnotation in
           let annotation = StationAnnotation(station: .meteo(station))
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
@@ -68,9 +78,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
           return annotation
         }
         
-        DispatchQueue.main.async {
-          self.mapView.addAnnotations(annoations)
-        }
+        self?.add(annotations)
       case let .failure(error):
         os_log("%s", log: OSLog.standard, type: OSLogType.error, error.localizedDescription)
       }
@@ -78,10 +86,10 @@ class ObservationsViewController: UIViewController, Storyboarded {
   }
   
   private func loadLatvianRoadsObservations() {
-    meteoDataProvider.latvianRoadsObservations { result in
+    meteoDataProvider.latvianRoadsObservations { [weak self] result in
       switch result {
       case let .success(stations):
-        let annoations = stations.map { station -> StationAnnotation in
+        let annotations = stations.map { station -> StationAnnotation in
           let annotation = StationAnnotation(station: .road(station))
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
@@ -92,12 +100,18 @@ class ObservationsViewController: UIViewController, Storyboarded {
           return annotation
         }
         
-        DispatchQueue.main.async {
-          self.mapView.addAnnotations(annoations)
-        }
+        self?.add(annotations)
       case let .failure(error):
         os_log("%s", log: OSLog.standard, type: OSLogType.error, error.localizedDescription)
       }
+    }
+  }
+  
+  private func add(_ annotations: [StationAnnotation]) {
+    lastUpdateDate = Date()
+    
+    DispatchQueue.main.async {
+      self.mapView.addAnnotations(annotations)
     }
   }
 }
@@ -110,7 +124,15 @@ extension ObservationsViewController {
   
   @IBAction func refreshObservations() {
     self.mapView.removeAnnotations(self.mapView.annotations)
-    loadObservations()
-    loadLatvianRoadsObservations()
+    
+    lastUpdateDate = nil
+    refreshData()
+  }
+  
+  private func refreshData() {
+    if needUpdate {
+      loadObservations()
+      loadLatvianRoadsObservations()
+    }
   }
 }
