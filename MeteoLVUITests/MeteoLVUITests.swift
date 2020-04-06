@@ -20,6 +20,21 @@ class MeteoLVUITests: XCTestCase {
     continueAfterFailure = false
   }
   
+  func testList() {
+    launchApp()
+    
+    app.tabBars.buttons["List"].tap()
+    sleep(2)
+    
+    takeScreenShot("list", counter: 6)
+    
+    let table = app.tables.firstMatch
+    let lastCell = table.cells.element(boundBy: table.cells.count-1)
+    table.scrollToElement(element: lastCell)
+    
+    lastCell.tap()
+  }
+  
   func testMeteoLVStation() {
     
     let stationName = "Rūjiena"
@@ -34,7 +49,7 @@ class MeteoLVUITests: XCTestCase {
 
     let parametersTable = app.tables.firstMatch
     let temperatureLabel = parametersTable.cells.staticTexts["Temperatūra (°C)"]
-    let temperatureValue = parametersTable.cells.staticTexts["+ 0,6"]
+    let temperatureValue = parametersTable.cells.staticTexts["+0,6"]
     
     let windSpeedCell = parametersTable.cells.staticTexts["Vēja ātrums (m/s)"]
     let windSpeedValue = parametersTable.cells.staticTexts["ZA"]
@@ -77,7 +92,7 @@ class MeteoLVUITests: XCTestCase {
     
     takeScreenShot("meteo_lv_station_\(stationName)", counter: 4)
 
-    let backButton = navigationBar.buttons["Novērojumi"].firstMatch
+    let backButton = navigationBar.buttons["Map"].firstMatch
     backButton.tap()
   }
   
@@ -112,7 +127,7 @@ class MeteoLVUITests: XCTestCase {
     
     takeScreenShot("LV_road_Station_\(stationName)", counter: 4)
     
-    let backButton = navigationBar.buttons["Novērojumi"].firstMatch
+    let backButton = navigationBar.buttons["Map"].firstMatch
     backButton.tap()
   }
   
@@ -121,7 +136,7 @@ class MeteoLVUITests: XCTestCase {
     
     takeScreenShot("MainScreen", counter: 1)
 
-    let observationsNavigationbar = app.navigationBars["Novērojumi"].firstMatch
+    let observationsNavigationbar = app.navigationBars["Map"].firstMatch
     XCTAssertTrue(waitForElementToAppear(observationsNavigationbar))
 
     let refreshButton = observationsNavigationbar.buttons["Refresh"]
@@ -135,7 +150,9 @@ class MeteoLVUITests: XCTestCase {
   func testInfoView() {
     launchApp()
     
-    app.navigationBars["Novērojumi"].buttons["Info"].tap()
+    app.tabBars.buttons["Map"].tap()
+    
+    app.navigationBars["Map"].buttons["Info"].tap()
     
     let navigationBar = app.navigationBars["Info"]
     XCTAssertTrue(waitForElementToAppear(navigationBar))
@@ -145,18 +162,22 @@ class MeteoLVUITests: XCTestCase {
     
     takeScreenShot("InfoScreen", counter: 6)
     
-    let backButton = navigationBar.buttons["Novērojumi"].firstMatch
+    let backButton = navigationBar.buttons["Map"].firstMatch
     backButton.tap()
   }
   
   func testTapMeteoLV() {
     launchApp()
     
+    app.tabBars.buttons["Map"].tap()
+    
     runWithStation("Rūjiena", counter: 2)
   }
   
   func testTapLVRoad() {
     launchApp()
+    
+    app.tabBars.buttons["Map"].tap()
     
     runWithStation("Strenči", counter: 3)
   }
@@ -182,5 +203,18 @@ class MeteoLVUITests: XCTestCase {
   
   fileprivate func takeScreenShot(_ name: String, counter: Int) {
     snapshot("\(String(format: "%02d", counter))_\(name)")
+  }
+}
+
+extension XCUIElement {
+  func scrollToElement(element: XCUIElement) {
+    while !element.visible() {
+      swipeUp()
+    }
+  }
+  
+  func visible() -> Bool {
+    guard self.exists && !self.frame.isEmpty else { return false }
+    return XCUIApplication().windows.element(boundBy: 0).frame.contains(self.frame)
   }
 }
