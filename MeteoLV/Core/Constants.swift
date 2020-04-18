@@ -15,9 +15,9 @@ enum Constants {
   static let favoritesKey = "favorites"
 }
 
-let defaults = UserDefaults.standard
+public let defaults = UserDefaults.standard
 
-extension UserDefaults {
+public extension UserDefaults {
   var favorites: [String] {
     stringArray(forKey: Constants.favoritesKey) ?? []
   }
@@ -26,4 +26,6 @@ extension UserDefaults {
 extension UIImage {
   static let favoritesFull = UIImage(named: "favorites-full")
   static let favorites = UIImage(named: "favorites")
+  static let homeFull = UIImage(named: "home-full")
+  static let home = UIImage(named: "home")
 }

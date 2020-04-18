@@ -15,14 +15,17 @@ class StationViewController: UITableViewController, Storyboarded {
   var station: ObservationStation!
   
   @IBOutlet private weak var favoriteButton: UIBarButtonItem!
+  @IBOutlet private weak var homeButton: UIBarButtonItem!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = station.name
     updateFavoriteButton()
+    updateHomeButton()
   }
 }
+
 // MARK: - UI Actions
 extension StationViewController {
   @IBAction func favorite(_ sender: Any) {
@@ -31,9 +34,21 @@ extension StationViewController {
     }
   }
   
+  @IBAction func setHome(_ sender: Any) {
+    station.setHome { [weak self] in
+      self?.updateHomeButton()
+    }
+  }
+  
   private func updateFavoriteButton() {
     UIView.animate(withDuration: 0.5) { [weak self] in
       self?.favoriteButton.image = self?.station.isFavorited ?? false ? .favoritesFull : .favorites
+    }
+  }
+  
+  private func updateHomeButton() {
+    UIView.animate(withDuration: 0.5) { [weak self] in
+      self?.homeButton.image = self?.station.isHome ?? false ? .homeFull : .home
     }
   }
 }

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+import MeteoLVProvider
+
 class ListCoordinator: ListCoordinatorProtocol {
   var navigationController: UINavigationController
   

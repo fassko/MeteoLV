@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "MeteoLVProvider",
-        "repositoryURL": "https://github.com/fassko/MeteoLVProvider",
+        "repositoryURL": "https://github.com/fassko/MeteoLVprovider",
         "state": {
           "branch": null,
-          "revision": "8a6f1a3743d31aed6e1f80654e173e9cb3457335",
-          "version": "0.5.0"
+          "revision": "8f9ebc1e1e3ea3c0ad50c9f202d1f706ad7e3973",
+          "version": "0.6.0"
         }
       },
       {

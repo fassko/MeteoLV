@@ -7,8 +7,9 @@
 //
 
 import Foundation
-
 import UIKit
+
+import MeteoLVProvider
 
 class MapViewCooordinator: Coordinator {
   var navigationController: UINavigationController

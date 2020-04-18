@@ -11,47 +11,32 @@ import Foundation
 import MeteoLVProvider
 
 /// Observation station
-enum ObservationStation: Comparable, CustomStringConvertible, Equatable {
-  
-  /// meteo.lv station
-  case meteo(Station)
-  
-  /// lvceli.lv station
-  case road(LatvianRoadsStation)
-  
-  var id: String {
-    switch self {
-    case .meteo:
-      return Data((name + "meteo").utf8).hexDescription
-    case .road:
-      return Data((name + "lvRoad").utf8).hexDescription
-    }
-  }
-  
-  /// Name of the station
-  var name: String {
-    switch self {
-    case let .meteo(meteoStation):
-      return meteoStation.name
-    case let .road(roadStation):
-      return roadStation.name
-    }
-  }
-  
-  var description: String {
-    name
-  }
-  
-  static func < (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
-    compare(lhs, rhs)
-  }
-  
-  static func == (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
-    compare(lhs, rhs)
-  }
+extension ObservationStation {
   
   var isFavorited: Bool {
     defaults.favorites.contains(id)
+  }
+  
+  var isHome: Bool {
+    guard let userDefaults = UserDefaults(suiteName: "group.com.fassko.MeteoLV"),
+      let home = userDefaults.string(forKey: "home") else {
+        return false
+    }
+    
+    return home == id
+  }
+  
+  func setHome(_ completion: @escaping () -> Void) {
+    let userDefaults = UserDefaults(suiteName: "group.com.fassko.MeteoLV")
+    let home = userDefaults?.string(forKey: "home")
+    
+    if home == id {
+      userDefaults?.removeObject(forKey: "home")
+    } else {
+      userDefaults?.set(id, forKey: "home")
+    }
+    
+    completion()
   }
   
   func toggleFavorite(_ completion: @escaping () -> Void) {

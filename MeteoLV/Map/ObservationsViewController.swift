@@ -70,29 +70,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
       switch result {
       case let .success(stations):
         let annotations = stations.map { station -> StationAnnotation in
-          let annotation = StationAnnotation(station: .meteo(station))
-          annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
-          annotation.title = station.name
-          annotation.subtitle = station.temperature
-          annotation.accessibilityLabel = station.name
-          annotation.accessibilityIdentifier = station.name
-          
-          return annotation
-        }
-        
-        self?.add(annotations)
-      case let .failure(error):
-        os_log("%s", log: OSLog.standard, type: OSLogType.error, error.localizedDescription)
-      }
-    }
-  }
-  
-  private func loadLatvianRoadsObservations() {
-    meteoDataProvider.latvianRoadsObservations { [weak self] result in
-      switch result {
-      case let .success(stations):
-        let annotations = stations.map { station -> StationAnnotation in
-          let annotation = StationAnnotation(station: .road(station))
+          let annotation = StationAnnotation(station: station)
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.name
           annotation.subtitle = station.temperature
@@ -139,7 +117,6 @@ extension ObservationsViewController {
     if needUpdate {
       removeAnnotations()
       loadObservations()
-      loadLatvianRoadsObservations()
     }
   }
 }

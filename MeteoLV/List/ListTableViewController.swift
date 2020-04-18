@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 import MeteoLVProvider
 
@@ -75,26 +76,16 @@ class ListTableViewController: ListingTableViewController, Storyboarded {
   override func loadData() {
     meteoDataProvider.observations { [weak self] result in
       switch result {
-      case .success(let meteoLVData):
+      case .success(let observationStations):
         self?.stations.removeAll()
-        var tmpStationsData = meteoLVData.map { ObservationStation.meteo($0) }
-        
-        self?.meteoDataProvider.latvianRoadsObservations { [weak self] result in
-          switch result {
-          case .success(let lvRoadsData):
-            tmpStationsData.append(contentsOf: lvRoadsData.map { ObservationStation.road($0) })
-            self?.stations.append(contentsOf: tmpStationsData.sorted(by: ==))
-            
-            DispatchQueue.main.async {
-              self?.tableView.reloadData()
-            }
-          case .failure(let error):
-            debugPrint("Failed to load LV roads \(error)")
-          }
+        let stations = observationStations.sorted(by: ==)
+        self?.stations.append(contentsOf: stations)
+
+        DispatchQueue.main.async {
+          self?.tableView.reloadData()
         }
-        
-      case .failure(let error):
-        debugPrint("Failed to load Meteo LV data \(error)")
+      case let .failure(error):
+        os_log("%s", log: OSLog.standard, type: OSLogType.error, error.localizedDescription)
       }
     }
   }

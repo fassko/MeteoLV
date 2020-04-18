@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -124,15 +124,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="H1g-b5-mT1">
-                        <barButtonItem key="rightBarButtonItem" image="favorites" style="plain" id="GgK-89-wcO">
-                            <connections>
-                                <action selector="favorite:" destination="kg8-nm-Ie8" id="Lcr-E8-Z4Y"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="favorites" style="plain" id="GgK-89-wcO">
+                                <connections>
+                                    <action selector="favorite:" destination="kg8-nm-Ie8" id="Lcr-E8-Z4Y"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="home" style="plain" id="Azt-1P-wFm">
+                                <connections>
+                                    <action selector="setHome:" destination="kg8-nm-Ie8" id="B0y-Pf-RZh"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="favoriteButton" destination="GgK-89-wcO" id="0rb-iG-RUm"/>
+                        <outlet property="homeButton" destination="Azt-1P-wFm" id="7qg-xU-HqA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5S-Jr-K3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,5 +239,6 @@
     <resources>
         <image name="Logo" width="196" height="196"/>
         <image name="favorites" width="30" height="30"/>
+        <image name="home" width="32" height="30"/>
     </resources>
 </document>

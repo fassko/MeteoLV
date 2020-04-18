@@ -8,6 +8,8 @@
 
 import Foundation
 
+import MeteoLVProvider
+
 protocol ListCoordinatorProtocol: Coordinator {
   func showObservationStation(_ station: ObservationStation)
 }

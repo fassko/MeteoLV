@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+import MeteoLVProvider
+
 class FavoritesViewCoordinator: ListCoordinatorProtocol {
   var navigationController: UINavigationController
   
