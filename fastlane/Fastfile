@@ -16,6 +16,22 @@ platform :ios do
     )
   end
 
+  lane :current_version do
+    version = get_version_number(
+      xcodeproj: "MeteoLV.xcodeproj",
+      target: "MeteoLV",
+    )
+    version
+  end
+
+  lane :update_version do |options|
+    puts current_version
+
+    increment_version_number(
+      version_number: options[:version]
+    )
+  end
+
   desc "UI tests"
   lane :test do
     # Test
