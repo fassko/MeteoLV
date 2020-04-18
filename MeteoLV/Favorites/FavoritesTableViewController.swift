@@ -13,7 +13,7 @@ class FavoritesTableViewController: ListingTableViewController, Storyboarded {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "List".localized
+    title = "Favorites".localized
   }
   
   override func loadData() {
