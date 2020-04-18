@@ -26,6 +26,16 @@ Certs
 fastlane ios generate_icon
 ```
 
+### ios current_version
+```
+fastlane ios current_version
+```
+
+### ios update_version
+```
+fastlane ios update_version
+```
+
 ### ios test
 ```
 fastlane ios test

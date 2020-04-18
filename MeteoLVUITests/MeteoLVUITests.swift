@@ -35,6 +35,15 @@ class MeteoLVUITests: XCTestCase {
     lastCell.tap()
   }
   
+  func testFavorites() {
+    launchApp()
+    
+    app.tabBars.buttons["Favorites"].tap()
+    sleep(2)
+    
+    takeScreenShot("favorites", counter: 6)
+  }
+  
   func testMeteoLVStation() {
     
     let stationName = "Rūjiena"

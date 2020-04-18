@@ -13,6 +13,12 @@
 		6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9A2039EF16007C268C /* ObservationsViewController.swift */; };
 		6300DC9F2039F889007C268C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DC9E2039F889007C268C /* StationViewController.swift */; };
 		6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300DCA02039FA08007C268C /* StationAnnotation.swift */; };
+		63059D3D244B156E003BF03A /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059D3C244B156E003BF03A /* FavoritesTableViewController.swift */; };
+		63059D45244B1AE2003BF03A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63059D44244B1AE2003BF03A /* NotificationCenter.framework */; };
+		63059D48244B1AE2003BF03A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059D47244B1AE2003BF03A /* TodayViewController.swift */; };
+		63059D4B244B1AE2003BF03A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63059D49244B1AE2003BF03A /* MainInterface.storyboard */; };
+		63059D4F244B1AE2003BF03A /* Weather Latvia.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63059D42244B1AE2003BF03A /* Weather Latvia.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63059D54244B2AB6003BF03A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F1F7EE2046069400305DF7 /* Assets.xcassets */; };
 		631E462421BBEFB2000CC546 /* ObservationsViewController+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */; };
 		631E462621BBF287000CC546 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462521BBF287000CC546 /* Constants.swift */; };
 		631E462821BBF633000CC546 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462721BBF633000CC546 /* OSLog.swift */; };
@@ -21,15 +27,18 @@
 		631E462E21BC0DD6000CC546 /* ObservationsViewController+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */; };
 		635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
 		635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524F3205E5E6700EC0E23 /* InfoViewController.swift */; };
+		636EC0FF244B37FF004E42A9 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 636EC0FE244B37FF004E42A9 /* MeteoLVProvider */; };
+		636EC101244B3EB3004E42A9 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 636EC100244B3EB3004E42A9 /* MeteoLVProvider */; };
 		6375AB5C236D740400B1D8F4 /* MeteoLV.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */; };
 		638E119821860AFC00F20159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119721860AFC00F20159 /* Coordinator.swift */; };
 		638E119A21860B2700F20159 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119921860B2700F20159 /* Storyboarded.swift */; };
-		638E119C21860B5E00F20159 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MainCoordinator.swift */; };
-		639F3E97243A543100DF33E5 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 639F3E96243A543100DF33E5 /* MeteoLVProvider */; };
+		638E119C21860B5E00F20159 /* MapViewCooordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MapViewCooordinator.swift */; };
 		639F3E9A243A5B7000DF33E5 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F3E99243A5B7000DF33E5 /* ListCoordinator.swift */; };
 		639F3E9C243A5D2B00DF33E5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F3E9B243A5D2B00DF33E5 /* ListTableViewController.swift */; };
 		639F3E9F243A696100DF33E5 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 639F3EA1243A696100DF33E5 /* Localized.strings */; };
 		639F3EA4243A698900DF33E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F3EA3243A698900DF33E5 /* Extensions.swift */; };
+		63D4718E243BA7CA00077406 /* FavoritesViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D4718D243BA7CA00077406 /* FavoritesViewCoordinator.swift */; };
+		63D47190243BA83000077406 /* ListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D4718F243BA83000077406 /* ListCoordinatorProtocol.swift */; };
 		63E0991B203A0C3A00959498 /* MeteoLVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */; };
 		63F024422045E7D200C07D89 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024412045E7D200C07D89 /* XCTest+Extensions.swift */; };
 		63F024442045EB6B00C07D89 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F024432045EB6B00C07D89 /* SnapshotHelper.swift */; };
@@ -37,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		63059D4D244B1AE2003BF03A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6300DC7D2039ED7D007C268C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63059D41244B1AE2003BF03A;
+			remoteInfo = MeteoLVTodayNotification;
+		};
 		63E0991D203A0C3A00959498 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6300DC7D2039ED7D007C268C /* Project object */;
@@ -45,6 +61,20 @@
 			remoteInfo = MeteoLV;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63059D53244B1AE2003BF03A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				63059D4F244B1AE2003BF03A /* Weather Latvia.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6300DC852039ED7D007C268C /* MeteoLV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoLV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +85,13 @@
 		6300DC9A2039EF16007C268C /* ObservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewController.swift; sourceTree = "<group>"; };
 		6300DC9E2039F889007C268C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		6300DCA02039FA08007C268C /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
+		63059D3C244B156E003BF03A /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		63059D42244B1AE2003BF03A /* Weather Latvia.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Weather Latvia.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63059D44244B1AE2003BF03A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		63059D47244B1AE2003BF03A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		63059D4A244B1AE2003BF03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		63059D4C244B1AE2003BF03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63059D55244B315A003BF03A /* MeteoLV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeteoLV.entitlements; sourceTree = "<group>"; };
 		631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+Map.swift"; sourceTree = "<group>"; };
 		631E462521BBF287000CC546 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		631E462721BBF633000CC546 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
@@ -63,15 +100,18 @@
 		631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservationsViewController+UITests.swift"; sourceTree = "<group>"; };
 		635524EE205E56A700EC0E23 /* ObservationsStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsStation.swift; sourceTree = "<group>"; };
 		635524F3205E5E6700EC0E23 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		636EC0F7244B3218004E42A9 /* Weather Latvia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Latvia.entitlements"; sourceTree = "<group>"; };
 		6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MeteoLV.xctestplan; sourceTree = "<group>"; };
 		638E119721860AFC00F20159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		638E119921860B2700F20159 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		638E119B21860B5E00F20159 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		638E119B21860B5E00F20159 /* MapViewCooordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCooordinator.swift; sourceTree = "<group>"; };
 		639F3E99243A5B7000DF33E5 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		639F3E9B243A5D2B00DF33E5 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		639F3EA0243A696100DF33E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		639F3EA2243A696D00DF33E5 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localized.strings; sourceTree = "<group>"; };
 		639F3EA3243A698900DF33E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		63D4718D243BA7CA00077406 /* FavoritesViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewCoordinator.swift; sourceTree = "<group>"; };
+		63D4718F243BA83000077406 /* ListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		63E09918203A0C3900959498 /* MeteoLVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoLVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E0991A203A0C3A00959498 /* MeteoLVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoLVUITests.swift; sourceTree = "<group>"; };
 		63E0991C203A0C3A00959498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +125,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639F3E97243A543100DF33E5 /* MeteoLVProvider in Frameworks */,
+				636EC0FF244B37FF004E42A9 /* MeteoLVProvider in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63059D3F244B1AE2003BF03A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636EC101244B3EB3004E42A9 /* MeteoLVProvider in Frameworks */,
+				63059D45244B1AE2003BF03A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +153,8 @@
 			children = (
 				6300DC872039ED7D007C268C /* MeteoLV */,
 				63E09919203A0C3A00959498 /* MeteoLVUITests */,
+				63059D46244B1AE2003BF03A /* MeteoLVTodayNotification */,
+				63059D43244B1AE2003BF03A /* Frameworks */,
 				6300DC862039ED7D007C268C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +164,7 @@
 			children = (
 				6300DC852039ED7D007C268C /* MeteoLV.app */,
 				63E09918203A0C3900959498 /* MeteoLVUITests.xctest */,
+				63059D42244B1AE2003BF03A /* Weather Latvia.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,14 +172,13 @@
 		6300DC872039ED7D007C268C /* MeteoLV */ = {
 			isa = PBXGroup;
 			children = (
+				63059D55244B315A003BF03A /* MeteoLV.entitlements */,
 				631E462121BBED9C000CC546 /* Core */,
-				635524EE205E56A700EC0E23 /* ObservationsStation.swift */,
-				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
-				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
-				631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */,
-				631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */,
-				639F3E9B243A5D2B00DF33E5 /* ListTableViewController.swift */,
-				6300DC9E2039F889007C268C /* StationViewController.swift */,
+				63059D37244B1088003BF03A /* Models */,
+				63059D36244B1081003BF03A /* Map */,
+				63059D3B244B1325003BF03A /* Favorites */,
+				63059D38244B1094003BF03A /* List */,
+				63059D39244B109F003BF03A /* StationView */,
 				635524F3205E5E6700EC0E23 /* InfoViewController.swift */,
 				639F3EA1243A696100DF33E5 /* Localized.strings */,
 				631E462221BBEDAE000CC546 /* Storyboards */,
@@ -137,13 +188,77 @@
 			path = MeteoLV;
 			sourceTree = "<group>";
 		};
+		63059D36244B1081003BF03A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6300DC9A2039EF16007C268C /* ObservationsViewController.swift */,
+				631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */,
+				631E462321BBEFB2000CC546 /* ObservationsViewController+Map.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		63059D37244B1088003BF03A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				635524EE205E56A700EC0E23 /* ObservationsStation.swift */,
+				6300DCA02039FA08007C268C /* StationAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63059D38244B1094003BF03A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				639F3E9B243A5D2B00DF33E5 /* ListTableViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		63059D39244B109F003BF03A /* StationView */ = {
+			isa = PBXGroup;
+			children = (
+				6300DC9E2039F889007C268C /* StationViewController.swift */,
+			);
+			path = StationView;
+			sourceTree = "<group>";
+		};
+		63059D3B244B1325003BF03A /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				63059D3C244B156E003BF03A /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		63059D43244B1AE2003BF03A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63059D44244B1AE2003BF03A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63059D46244B1AE2003BF03A /* MeteoLVTodayNotification */ = {
+			isa = PBXGroup;
+			children = (
+				636EC0F7244B3218004E42A9 /* Weather Latvia.entitlements */,
+				63059D47244B1AE2003BF03A /* TodayViewController.swift */,
+				63059D49244B1AE2003BF03A /* MainInterface.storyboard */,
+				63059D4C244B1AE2003BF03A /* Info.plist */,
+			);
+			path = MeteoLVTodayNotification;
+			sourceTree = "<group>";
+		};
 		631E462121BBED9C000CC546 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				6300DC882039ED7D007C268C /* AppDelegate.swift */,
 				638E119721860AFC00F20159 /* Coordinator.swift */,
 				638E119921860B2700F20159 /* Storyboarded.swift */,
-				638E119B21860B5E00F20159 /* MainCoordinator.swift */,
+				638E119B21860B5E00F20159 /* MapViewCooordinator.swift */,
+				63D4718F243BA83000077406 /* ListCoordinatorProtocol.swift */,
+				63D4718D243BA7CA00077406 /* FavoritesViewCoordinator.swift */,
 				639F3E99243A5B7000DF33E5 /* ListCoordinator.swift */,
 				631E462521BBF287000CC546 /* Constants.swift */,
 				631E462721BBF633000CC546 /* OSLog.swift */,
@@ -186,18 +301,40 @@
 				6300DC822039ED7D007C268C /* Frameworks */,
 				6300DC832039ED7D007C268C /* Resources */,
 				63EC843F204495740073749B /* Swiftlint */,
+				63059D53244B1AE2003BF03A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63059D4E244B1AE2003BF03A /* PBXTargetDependency */,
+			);
+			name = MeteoLV;
+			packageProductDependencies = (
+				636EC0FE244B37FF004E42A9 /* MeteoLVProvider */,
+			);
+			productName = MeteoLV;
+			productReference = 6300DC852039ED7D007C268C /* MeteoLV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63059D41244B1AE2003BF03A /* MeteoLVTodayNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63059D50244B1AE2003BF03A /* Build configuration list for PBXNativeTarget "MeteoLVTodayNotification" */;
+			buildPhases = (
+				63059D3E244B1AE2003BF03A /* Sources */,
+				63059D3F244B1AE2003BF03A /* Frameworks */,
+				63059D40244B1AE2003BF03A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MeteoLV;
+			name = MeteoLVTodayNotification;
 			packageProductDependencies = (
-				639F3E96243A543100DF33E5 /* MeteoLVProvider */,
+				636EC100244B3EB3004E42A9 /* MeteoLVProvider */,
 			);
-			productName = MeteoLV;
-			productReference = 6300DC852039ED7D007C268C /* MeteoLV.app */;
-			productType = "com.apple.product-type.application";
+			productName = MeteoLVTodayNotification;
+			productReference = 63059D42244B1AE2003BF03A /* Weather Latvia.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		63E09917203A0C3900959498 /* MeteoLVUITests */ = {
 			isa = PBXNativeTarget;
@@ -223,13 +360,16 @@
 		6300DC7D2039ED7D007C268C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = fassko;
 				TargetAttributes = {
 					6300DC842039ED7D007C268C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+					};
+					63059D41244B1AE2003BF03A = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 					63E09917203A0C3900959498 = {
 						CreatedOnToolsVersion = 9.2;
@@ -250,7 +390,7 @@
 			);
 			mainGroup = 6300DC7C2039ED7D007C268C;
 			packageReferences = (
-				639F3E95243A543100DF33E5 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */,
+				636EC0FD244B37FF004E42A9 /* XCRemoteSwiftPackageReference "MeteoLVprovider" */,
 			);
 			productRefGroup = 6300DC862039ED7D007C268C /* Products */;
 			projectDirPath = "";
@@ -258,6 +398,7 @@
 			targets = (
 				6300DC842039ED7D007C268C /* MeteoLV */,
 				63E09917203A0C3900959498 /* MeteoLVUITests */,
+				63059D41244B1AE2003BF03A /* MeteoLVTodayNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +414,15 @@
 				63F1F7EF2046069500305DF7 /* Assets.xcassets in Resources */,
 				631E462C21BC0DB1000CC546 /* roadLVStation.json in Resources */,
 				6300DC8E2039ED7D007C268C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63059D40244B1AE2003BF03A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63059D54244B2AB6003BF03A /* Assets.xcassets in Resources */,
+				63059D4B244B1AE2003BF03A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +465,8 @@
 				635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */,
 				631E462421BBEFB2000CC546 /* ObservationsViewController+Map.swift in Sources */,
 				6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */,
+				63D4718E243BA7CA00077406 /* FavoritesViewCoordinator.swift in Sources */,
+				63D47190243BA83000077406 /* ListCoordinatorProtocol.swift in Sources */,
 				6300DC892039ED7D007C268C /* AppDelegate.swift in Sources */,
 				635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */,
 				6300DCA12039FA08007C268C /* StationAnnotation.swift in Sources */,
@@ -322,8 +474,17 @@
 				639F3EA4243A698900DF33E5 /* Extensions.swift in Sources */,
 				639F3E9A243A5B7000DF33E5 /* ListCoordinator.swift in Sources */,
 				638E119821860AFC00F20159 /* Coordinator.swift in Sources */,
-				638E119C21860B5E00F20159 /* MainCoordinator.swift in Sources */,
+				638E119C21860B5E00F20159 /* MapViewCooordinator.swift in Sources */,
 				638E119A21860B2700F20159 /* Storyboarded.swift in Sources */,
+				63059D3D244B156E003BF03A /* FavoritesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63059D3E244B1AE2003BF03A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63059D48244B1AE2003BF03A /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +501,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		63059D4E244B1AE2003BF03A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63059D41244B1AE2003BF03A /* MeteoLVTodayNotification */;
+			targetProxy = 63059D4D244B1AE2003BF03A /* PBXContainerItemProxy */;
+		};
 		63E0991E203A0C3A00959498 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6300DC842039ED7D007C268C /* MeteoLV */;
@@ -362,6 +528,14 @@
 				6300DC922039ED7D007C268C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		63059D49244B1AE2003BF03A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63059D4A244B1AE2003BF03A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		639F3EA1243A696100DF33E5 /* Localized.strings */ = {
@@ -497,7 +671,9 @@
 		6300DC982039ED7D007C268C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -508,7 +684,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cb952d6d-f68f-4a35-ad73-81be9d46c861";
@@ -521,7 +697,9 @@
 		6300DC992039ED7D007C268C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
@@ -532,13 +710,64 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "53733216-fea9-43ff-991c-22ab35b48155";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.fassko.MeteoLV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		63059D51244B1AE2003BF03A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "MeteoLVTodayNotification/Weather Latvia.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3SGNZQGS68;
+				INFOPLIST_FILE = MeteoLVTodayNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.8;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV.MeteoLVTodayNotification;
+				PRODUCT_NAME = "Weather Latvia";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV.MeteoLVTodayNotification";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63059D52244B1AE2003BF03A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "MeteoLVTodayNotification/Weather Latvia.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3SGNZQGS68;
+				INFOPLIST_FILE = MeteoLVTodayNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.8;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV.MeteoLVTodayNotification;
+				PRODUCT_NAME = "Weather Latvia";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV.MeteoLVTodayNotification";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -607,6 +836,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		63059D50244B1AE2003BF03A /* Build configuration list for PBXNativeTarget "MeteoLVTodayNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63059D51244B1AE2003BF03A /* Debug */,
+				63059D52244B1AE2003BF03A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63E0991F203A0C3A00959498 /* Build configuration list for PBXNativeTarget "MeteoLVUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -619,20 +857,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		639F3E95243A543100DF33E5 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */ = {
+		636EC0FD244B37FF004E42A9 /* XCRemoteSwiftPackageReference "MeteoLVprovider" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fassko/MeteoLVProvider";
+			repositoryURL = "https://github.com/fassko/MeteoLVprovider";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.0;
+				minimumVersion = 0.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		639F3E96243A543100DF33E5 /* MeteoLVProvider */ = {
+		636EC0FE244B37FF004E42A9 /* MeteoLVProvider */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 639F3E95243A543100DF33E5 /* XCRemoteSwiftPackageReference "MeteoLVProvider" */;
+			package = 636EC0FD244B37FF004E42A9 /* XCRemoteSwiftPackageReference "MeteoLVprovider" */;
+			productName = MeteoLVProvider;
+		};
+		636EC100244B3EB3004E42A9 /* MeteoLVProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 636EC0FD244B37FF004E42A9 /* XCRemoteSwiftPackageReference "MeteoLVprovider" */;
 			productName = MeteoLVProvider;
 		};
 /* End XCSwiftPackageProductDependency section */

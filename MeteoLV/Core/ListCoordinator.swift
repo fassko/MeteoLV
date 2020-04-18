@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class ListCoordinator: Coordinator {
+import MeteoLVProvider
+
+class ListCoordinator: ListCoordinatorProtocol {
   var navigationController: UINavigationController
   
   init(navigationController: UINavigationController) {
@@ -27,5 +29,4 @@ class ListCoordinator: Coordinator {
     stationViewController.station = station
     navigationController.pushViewController(stationViewController, animated: true)
   }
-  
 }
