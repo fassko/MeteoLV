@@ -584,7 +584,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
+				CURRENT_PROJECT_VERSION = 1.8.200418.1842;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -646,7 +646,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
+				CURRENT_PROJECT_VERSION = 1.8.200418.1842;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -675,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
+				CURRENT_PROJECT_VERSION = 1.8.200418.1842;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
@@ -702,7 +702,7 @@
 				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.7.200405.2256;
+				CURRENT_PROJECT_VERSION = 1.8.200418.1842;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -725,6 +725,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "MeteoLVTodayNotification/Weather Latvia.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLVTodayNotification/Info.plist;
@@ -739,7 +740,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV.MeteoLVTodayNotification;
 				PRODUCT_NAME = "Weather Latvia";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV.MeteoLVTodayNotification";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.fassko.MeteoLV.MeteoLVTodayNotification";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,6 +752,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "MeteoLVTodayNotification/Weather Latvia.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLVTodayNotification/Info.plist;
@@ -764,7 +766,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fassko.MeteoLV.MeteoLVTodayNotification;
 				PRODUCT_NAME = "Weather Latvia";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.fassko.MeteoLV.MeteoLVTodayNotification";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.fassko.MeteoLV.MeteoLVTodayNotification";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

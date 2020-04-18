@@ -19,7 +19,7 @@ platform :ios do
   lane :current_version do
     version = get_version_number(
       xcodeproj: "MeteoLV.xcodeproj",
-      target: "MeteoLV",
+      target: "MeteoLV"
     )
     version
   end
@@ -51,7 +51,6 @@ platform :ios do
     gym(
       project: "MeteoLV.xcodeproj",
       scheme: "MeteoLV",
-      clean: true,
       output_name: "MeteoLV.ipa",
       include_symbols: true
     )
