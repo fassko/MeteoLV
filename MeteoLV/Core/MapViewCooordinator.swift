@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  MapViewCooordinator.swift
 //  MeteoLV
 //
 //  Created by Kristaps Grinbergs on 28/10/2018.
@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MapViewCooordinator: Coordinator {
   var navigationController: UINavigationController
   
   init(navigationController: UINavigationController) {

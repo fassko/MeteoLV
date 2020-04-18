@@ -12,4 +12,18 @@ import UIKit
 enum Constants {
   static var meteoLVTintColor = UIColor(red: 0.05, green: 0.29, blue: 0.53, alpha: 1.0)
   static var roadsTintColor = UIColor.lightGray
+  static let favoritesKey = "favorites"
+}
+
+let defaults = UserDefaults.standard
+
+extension UserDefaults {
+  var favorites: [String] {
+    stringArray(forKey: Constants.favoritesKey) ?? []
+  }
+}
+
+extension UIImage {
+  static let favoritesFull = UIImage(named: "favorites-full")
+  static let favorites = UIImage(named: "favorites")
 }

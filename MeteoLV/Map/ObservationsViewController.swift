@@ -14,7 +14,7 @@ import os.log
 
 class ObservationsViewController: UIViewController, Storyboarded {
   
-  weak var coordinator: MainCoordinator?
+  weak var coordinator: MapViewCooordinator?
   
   @IBOutlet private weak var mapView: MKMapView!
   

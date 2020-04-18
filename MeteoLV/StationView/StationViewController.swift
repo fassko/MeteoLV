@@ -13,22 +13,35 @@ import MeteoLVProvider
 class StationViewController: UITableViewController, Storyboarded {
 
   var station: ObservationStation!
-
+  
+  @IBOutlet private weak var favoriteButton: UIBarButtonItem!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = station.name
+    updateFavoriteButton()
+  }
+}
+// MARK: - UI Actions
+extension StationViewController {
+  @IBAction func favorite(_ sender: Any) {
+    station.toggleFavorite { [weak self] in
+      self?.updateFavoriteButton()
+    }
+  }
+  
+  private func updateFavoriteButton() {
+    UIView.animate(withDuration: 0.5) { [weak self] in
+      self?.favoriteButton.image = self?.station.isFavorited ?? false ? .favoritesFull : .favorites
+    }
   }
 }
 
 // MARK: - Table view controller
 extension StationViewController {
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return station.parameters.count
+    station.parameters.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

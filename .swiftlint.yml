@@ -3,6 +3,10 @@ included:
   - MeteoLVUITests
 excluded:
   - Pods
+
+identifier_name:
+  excluded:
+    - id
   
 disabled_rules:
   - trailing_whitespace

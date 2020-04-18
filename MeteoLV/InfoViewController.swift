@@ -16,11 +16,7 @@ class InfoViewController: UIViewController, Storyboarded {
     super.viewDidLoad()
   
     //swiftlint:disable line_length
-    infoTextView.text = """
-      Weather Latvia shows current weather observations in Latvia. Data comes from Latvian Environment, Geology and Meteorology Centre and Latvian State Roads.
-    
-      App is maintained by Kristaps Grinbergs and open sourced at https://github.com/fassko/MeteoLV
-    """
+    infoTextView.text = "Weather Latvia shows current weather observations in Latvia. Data comes from Latvian Environment, Geology and Meteorology Centre and Latvian State Roads.\n\nApp is maintained by Kristaps Grinbergs and open sourced at https://github.com/fassko/MeteoLV".localized
     infoTextView.accessibilityLabel = "Description"
   }
 }

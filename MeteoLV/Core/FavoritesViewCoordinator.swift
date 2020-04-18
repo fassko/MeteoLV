@@ -1,15 +1,15 @@
 //
-//  ListCoordinator.swift
+//  FavoritesViewCoordinator.swift
 //  MeteoLV
 //
-//  Created by Kristaps Grinbergs on 05/04/2020.
+//  Created by Kristaps Grinbergs on 06/04/2020.
 //  Copyright © 2020 fassko. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class ListCoordinator: ListCoordinatorProtocol {
+class FavoritesViewCoordinator: ListCoordinatorProtocol {
   var navigationController: UINavigationController
   
   init(navigationController: UINavigationController) {
@@ -17,9 +17,9 @@ class ListCoordinator: ListCoordinatorProtocol {
   }
   
   func start() {
-    let listTableViewController = ListTableViewController.instantiate()
-    listTableViewController.coordinator = self
-    navigationController.pushViewController(listTableViewController, animated: false)
+    let favoritesTableViewController = FavoritesTableViewController.instantiate()
+    favoritesTableViewController.coordinator = self
+    navigationController.pushViewController(favoritesTableViewController, animated: false)
   }
   
   func showObservationStation(_ station: ObservationStation) {

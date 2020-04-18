@@ -11,13 +11,22 @@ import Foundation
 import MeteoLVProvider
 
 /// Observation station
-enum ObservationStation: Comparable, CustomStringConvertible {
+enum ObservationStation: Comparable, CustomStringConvertible, Equatable {
   
   /// meteo.lv station
   case meteo(Station)
   
   /// lvceli.lv station
   case road(LatvianRoadsStation)
+  
+  var id: String {
+    switch self {
+    case .meteo:
+      return Data((name + "meteo").utf8).hexDescription
+    case .road:
+      return Data((name + "lvRoad").utf8).hexDescription
+    }
+  }
   
   /// Name of the station
   var name: String {
@@ -39,6 +48,23 @@ enum ObservationStation: Comparable, CustomStringConvertible {
   
   static func == (lhs: ObservationStation, rhs: ObservationStation) -> Bool {
     compare(lhs, rhs)
+  }
+  
+  var isFavorited: Bool {
+    defaults.favorites.contains(id)
+  }
+  
+  func toggleFavorite(_ completion: @escaping () -> Void) {
+    let favoritesArray = defaults.favorites
+    var favorites = Set(favoritesArray)
+    
+    if favorites.contains(id) {
+      favorites.remove(id)
+    } else {
+      favorites.insert(id)
+    }
+    defaults.set(Array(favorites), forKey: Constants.favoritesKey)
+    completion()
   }
   
   private static func compare(_ lhs: ObservationStation, _ rhs: ObservationStation) -> Bool {
@@ -87,5 +113,11 @@ enum ObservationStation: Comparable, CustomStringConvertible {
         ]
       })
     }
+  }
+}
+
+extension Data {
+  var hexDescription: String {
+    return reduce("") {$0 + String(format: "%02x", $1)}
   }
 }

@@ -12,28 +12,38 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  var mapCoordinator: MainCoordinator?
-  var listCoordinatopr: ListCoordinator?
+  var mapCoordinator: MapViewCooordinator?
+  var favoritesCoordinator: FavoritesViewCoordinator?
+  var listCoordinator: ListCoordinator?
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     let mapNavigationController = UINavigationController()
-    mapCoordinator = MainCoordinator(navigationController: mapNavigationController)
+    mapCoordinator = MapViewCooordinator(navigationController: mapNavigationController)
     mapCoordinator?.start()
     let mapTabBarItem = UITabBarItem(title: "Map".localized, image: UIImage(named: "map"), tag: 0)
     mapTabBarItem.accessibilityLabel = "Map"
     mapNavigationController.tabBarItem = mapTabBarItem
     
+    let favoritesNavigationController = UINavigationController()
+    favoritesCoordinator = FavoritesViewCoordinator(navigationController: favoritesNavigationController)
+    favoritesCoordinator?.start()
+    let favoritesTabBarItem = UITabBarItem(title: "Favorites".localized, image: UIImage(named: "favorites"), tag: 0)
+    favoritesTabBarItem.accessibilityLabel = "Favorites"
+    favoritesNavigationController.tabBarItem = favoritesTabBarItem
+    
     let listNavigationController = UINavigationController()
-    listCoordinatopr = ListCoordinator(navigationController: listNavigationController)
-    listCoordinatopr?.start()
+    listCoordinator = ListCoordinator(navigationController: listNavigationController)
+    listCoordinator?.start()
     let listTabBarItem = UITabBarItem(title: "List".localized, image: UIImage(named: "list"), tag: 0)
     listTabBarItem.accessibilityLabel = "List"
     listNavigationController.tabBarItem = listTabBarItem
     
     let tabBarController = UITabBarController()
-    tabBarController.viewControllers = [mapNavigationController, listNavigationController]
+    tabBarController.viewControllers = [mapNavigationController,
+                                        favoritesNavigationController,
+                                        listNavigationController]
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = tabBarController
