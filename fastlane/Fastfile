@@ -20,7 +20,7 @@ platform :ios do
   lane :test do
     # Test
     scan(
-      workspace: "MeteoLV.xcworkspace",
+      project: "MeteoLV.xcodeproj",
 			scheme: "MeteoLV",
 			clean: true,
       device: "iPhone 11 Pro",
@@ -33,7 +33,7 @@ platform :ios do
     increment_build_number build_number: get_version_number + "." + Time.new.strftime("%y%m%d.%H%M")
 
     gym(
-      workspace: "MeteoLV.xcworkspace",
+      project: "MeteoLV.xcodeproj",
       scheme: "MeteoLV",
       clean: true,
       output_name: "MeteoLV.ipa",
