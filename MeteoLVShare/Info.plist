@@ -19,13 +19,16 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.9</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.9.200419.1133</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<string>TRUEPREDICATE</string>
+			<dict>
+				<key>NSExtensionActivationSupportsText</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
