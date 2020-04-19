@@ -24,6 +24,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     super.viewDidLoad()
   }
   
+  @IBAction func openApp(_ sender: AnyObject) {
+    guard let appURL = URL(string: "weatherLatvia://home") else {
+      return
+    }
+    
+    extensionContext?.open(appURL)
+  }
+  
   func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
     // If an error is encountered, use NCUpdateResult.Failed
     // If there's no update required, use NCUpdateResult.NoData

@@ -64,11 +64,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-SD-koL">
+                                <rect key="frame" x="0.0" y="45" width="320" height="75"/>
+                                <connections>
+                                    <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1Li-hh-DGv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="WC7-SD-koL" secondAttribute="bottom" id="QTP-yc-Ylo"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="Sxc-Zw-Ezo"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="WC7-SD-koL" secondAttribute="trailing" id="TzE-5E-1ym"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="height" secondItem="ssy-KU-ocm" secondAttribute="height" multiplier="0.6" id="bk0-MR-5NN"/>
+                            <constraint firstItem="WC7-SD-koL" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="cpR-29-3az"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="cEv-80-CVE" secondAttribute="trailing" constant="16" id="p2u-0r-JK1"/>
+                            <constraint firstItem="WC7-SD-koL" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="1" id="rQm-Je-tPB"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="sh7-gO-C8p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
