@@ -25,6 +25,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setHomeLocationLabel.text = "Please set your Home location.".localized
   }
   
   @IBAction func openApp(_ sender: AnyObject) {

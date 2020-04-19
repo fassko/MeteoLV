@@ -34,6 +34,8 @@
 		63761DB7244C3D060013E993 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63761DB6244C3D060013E993 /* ShareViewController.swift */; };
 		63761DBA244C3D060013E993 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63761DB8244C3D060013E993 /* MainInterface.storyboard */; };
 		63761DBE244C3D060013E993 /* MeteoLVShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63761DB4244C3D060013E993 /* MeteoLVShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63761DC2244C41DC0013E993 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 639F3EA1243A696100DF33E5 /* Localized.strings */; };
+		63761DC3244C41EC0013E993 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F3EA3243A698900DF33E5 /* Extensions.swift */; };
 		638E119821860AFC00F20159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119721860AFC00F20159 /* Coordinator.swift */; };
 		638E119A21860B2700F20159 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119921860B2700F20159 /* Storyboarded.swift */; };
 		638E119C21860B5E00F20159 /* MapViewCooordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MapViewCooordinator.swift */; };
@@ -480,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63761DC2244C41DC0013E993 /* Localized.strings in Resources */,
 				63059D54244B2AB6003BF03A /* Assets.xcassets in Resources */,
 				63059D4B244B1AE2003BF03A /* MainInterface.storyboard in Resources */,
 			);
@@ -553,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63059D48244B1AE2003BF03A /* TodayViewController.swift in Sources */,
+				63761DC3244C41EC0013E993 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
