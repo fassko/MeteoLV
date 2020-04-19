@@ -26,6 +26,7 @@ class FavoritesTableViewController: ListingTableViewController, Storyboarded {
 
         DispatchQueue.main.async {
           self?.tableView.reloadData()
+          self?.refreshControl?.endRefreshing()
         }
       case let .failure(error):
         os_log("%s", log: OSLog.standard, type: OSLogType.error, error.localizedDescription)

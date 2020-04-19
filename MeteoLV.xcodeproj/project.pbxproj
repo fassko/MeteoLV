@@ -30,6 +30,7 @@
 		636EC0FF244B37FF004E42A9 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 636EC0FE244B37FF004E42A9 /* MeteoLVProvider */; };
 		636EC101244B3EB3004E42A9 /* MeteoLVProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 636EC100244B3EB3004E42A9 /* MeteoLVProvider */; };
 		6375AB5C236D740400B1D8F4 /* MeteoLV.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */; };
+		63761DAF244C38260013E993 /* ListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63761DAE244C38260013E993 /* ListingTableViewController.swift */; };
 		638E119821860AFC00F20159 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119721860AFC00F20159 /* Coordinator.swift */; };
 		638E119A21860B2700F20159 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119921860B2700F20159 /* Storyboarded.swift */; };
 		638E119C21860B5E00F20159 /* MapViewCooordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638E119B21860B5E00F20159 /* MapViewCooordinator.swift */; };
@@ -102,6 +103,7 @@
 		635524F3205E5E6700EC0E23 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		636EC0F7244B3218004E42A9 /* Weather Latvia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Latvia.entitlements"; sourceTree = "<group>"; };
 		6375AB5B236D740400B1D8F4 /* MeteoLV.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MeteoLV.xctestplan; sourceTree = "<group>"; };
+		63761DAE244C38260013E993 /* ListingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableViewController.swift; sourceTree = "<group>"; };
 		638E119721860AFC00F20159 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		638E119921860B2700F20159 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		638E119B21860B5E00F20159 /* MapViewCooordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCooordinator.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		63059D38244B1094003BF03A /* List */ = {
 			isa = PBXGroup;
 			children = (
+				63761DAE244C38260013E993 /* ListingTableViewController.swift */,
 				639F3E9B243A5D2B00DF33E5 /* ListTableViewController.swift */,
 			);
 			path = List;
@@ -466,6 +469,7 @@
 				631E462421BBEFB2000CC546 /* ObservationsViewController+Map.swift in Sources */,
 				6300DC9B2039EF16007C268C /* ObservationsViewController.swift in Sources */,
 				63D4718E243BA7CA00077406 /* FavoritesViewCoordinator.swift in Sources */,
+				63761DAF244C38260013E993 /* ListingTableViewController.swift in Sources */,
 				63D47190243BA83000077406 /* ListCoordinatorProtocol.swift in Sources */,
 				6300DC892039ED7D007C268C /* AppDelegate.swift in Sources */,
 				635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */,
