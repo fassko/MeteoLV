@@ -40,6 +40,16 @@ extension StationViewController {
     }
   }
   
+  @IBAction func share(_ sender: Any) {
+    guard let temperature = station.temperature, let wind = station.wind else {
+      return
+    }
+    
+    let text = "\(station.name) \(temperature) \(wind)"
+    let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+    navigationController?.present(activityViewController, animated: true, completion: {})
+  }
+  
   private func updateFavoriteButton() {
     UIView.animate(withDuration: 0.5) { [weak self] in
       self?.favoriteButton.image = self?.station.isFavorited ?? false ? .favoritesFull : .favorites

@@ -135,6 +135,11 @@
                                     <action selector="setHome:" destination="kg8-nm-Ie8" id="B0y-Pf-RZh"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem style="plain" systemItem="action" id="LUr-fe-aZD">
+                                <connections>
+                                    <action selector="share:" destination="kg8-nm-Ie8" id="3C5-bF-m7c"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
