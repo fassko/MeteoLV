@@ -12,4 +12,4 @@ scheme "MeteoLV"
 
 clear_previous_screenshots true
 
-workspace "./MeteoLV.xcworkspace"
+project "./MeteoLV.xcodeproj"

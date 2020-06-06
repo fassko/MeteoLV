@@ -30,7 +30,7 @@ class MapViewCooordinator: Coordinator {
     navigationController.pushViewController(stationViewController, animated: true)
   }
   
-  func showInfo() {
+  func showInfo() { 
     let infoViewController = InfoViewController.instantiate()
     navigationController.pushViewController(infoViewController, animated: true)
   }
