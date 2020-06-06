@@ -2,5 +2,9 @@ git_url "https://fassko@bitbucket.org/fassko/certificates"
 
 type "development"
 
-app_identifier ["com.fassko.MeteoLV", "com.fassko.MeteoLVUITests", "com.fassko.MeteoLV.MeteoLVTodayNotification"]
+app_identifier ["com.fassko.MeteoLV", 
+  "com.fassko.MeteoLVUITests", 
+  "com.fassko.MeteoLV.MeteoLVTodayNotification",
+  "com.fassko.MeteoLV.MeteoLVShare"]
+  
 username "fassko@gmail.com"

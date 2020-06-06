@@ -64,12 +64,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-SD-koL">
+                                <rect key="frame" x="0.0" y="45" width="320" height="75"/>
+                                <connections>
+                                    <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1Li-hh-DGv"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please set your Home location." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHl-up-zyo">
+                                <rect key="frame" x="16" y="26.5" width="288" height="67.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="LHl-up-zyo" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="Nsr-bv-2lM"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="WC7-SD-koL" secondAttribute="bottom" id="QTP-yc-Ylo"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="Sxc-Zw-Ezo"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="WC7-SD-koL" secondAttribute="trailing" id="TzE-5E-1ym"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="height" secondItem="ssy-KU-ocm" secondAttribute="height" multiplier="0.6" id="bk0-MR-5NN"/>
+                            <constraint firstItem="WC7-SD-koL" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="cpR-29-3az"/>
+                            <constraint firstItem="LHl-up-zyo" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" constant="-16" id="eZL-DH-YNp"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="leading" secondItem="LHl-up-zyo" secondAttribute="leading" constant="-16" id="jib-3N-pKY"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="cEv-80-CVE" secondAttribute="trailing" constant="16" id="p2u-0r-JK1"/>
+                            <constraint firstItem="WC7-SD-koL" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="1" id="rQm-Je-tPB"/>
                             <constraint firstItem="cEv-80-CVE" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="sh7-gO-C8p"/>
+                            <constraint firstItem="LHl-up-zyo" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="sj6-6b-No0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -77,7 +97,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="120"/>
                     <connections>
+                        <outlet property="containerStackView" destination="cEv-80-CVE" id="AZc-Js-qoj"/>
                         <outlet property="locationName" destination="W0i-ws-ceE" id="ZCC-DV-FIi"/>
+                        <outlet property="setHomeLocationLabel" destination="LHl-up-zyo" id="arw-gw-AqH"/>
                         <outlet property="temperatureLabel" destination="dXv-r2-c76" id="X1L-EN-Iih"/>
                         <outlet property="windLabel" destination="Lrg-cy-ity" id="lTV-Ek-qeT"/>
                     </connections>

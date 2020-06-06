@@ -14,14 +14,27 @@ import MeteoLVProvider
 
 class TodayViewController: UIViewController, NCWidgetProviding {
   
+  @IBOutlet weak var containerStackView: UIStackView!
   @IBOutlet weak var locationName: UILabel!
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet weak var windLabel: UILabel!
+  
+  @IBOutlet weak var setHomeLocationLabel: UILabel!
   
   private let meteoDataProvider = MeteoLVProvider()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setHomeLocationLabel.text = "Please set your Home location.".localized
+  }
+  
+  @IBAction func openApp(_ sender: AnyObject) {
+    guard let appURL = URL(string: "weatherLatvia://home") else {
+      return
+    }
+    
+    extensionContext?.open(appURL)
   }
   
   func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -31,6 +44,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     guard let userDefaults = UserDefaults(suiteName: "group.com.fassko.MeteoLV"),
       let home = userDefaults.string(forKey: "home") else {
+        containerStackView.isHidden = true
+        setHomeLocationLabel.isHidden = false
         completionHandler(.noData)
         return
     }
@@ -47,6 +62,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self?.locationName.text = homeStation.name
         self?.temperatureLabel.text = homeStation.temperature
         self?.windLabel.text = homeStation.wind
+        self?.containerStackView.isHidden = false
+        self?.setHomeLocationLabel.isHidden = true
         completionHandler(NCUpdateResult.newData)
         
       case let .failure(error):
