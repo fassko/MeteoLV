@@ -13,6 +13,14 @@ import MeteoLVProvider
 /// Observation station
 extension ObservationStation {
   
+  var title: String {
+    guard let temperature = temperature else {
+      return name
+    }
+    
+    return "\(name) \(temperature)"
+  }
+  
   var isFavorited: Bool {
     defaults.favorites.contains(id)
   }
