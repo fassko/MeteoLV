@@ -18,7 +18,7 @@ extension ObservationStation {
       return name
     }
     
-    return "\(name) \(temperature)"
+    return "\(name) \n \(temperature)"
   }
   
   var isFavorited: Bool {
