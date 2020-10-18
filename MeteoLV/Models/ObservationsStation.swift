@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if canImport(WidgetKit)
+  import WidgetKit
+#endif
+
 import MeteoLVProvider
 
 /// Observation station
@@ -42,6 +46,10 @@ extension ObservationStation {
       userDefaults?.removeObject(forKey: "home")
     } else {
       userDefaults?.set(id, forKey: "home")
+    }
+    
+    if #available(iOS 14.0, *) {
+      WidgetCenter.shared.reloadAllTimelines()
     }
     
     completion()
