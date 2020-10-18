@@ -8,6 +8,10 @@
 
 import UIKit
 
+#if canImport(WidgetKit)
+  import WidgetKit
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -50,5 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     
     return true
+  }
+  
+  func applicationProtectedDataDidBecomeAvailable(_ application: UIApplication) {
+    if #available(iOS 14.0, *) {
+      WidgetCenter.shared.reloadAllTimelines()
+    }
   }
 }
