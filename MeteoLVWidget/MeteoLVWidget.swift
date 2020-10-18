@@ -24,7 +24,7 @@ struct Provider: TimelineProvider {
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     
     let currentDate = Date()
-    let refreshDate = Calendar.current.date(byAdding: .minute, value: 20, to: currentDate)!
+    let refreshDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
     
     guard let userDefaults = UserDefaults(suiteName: "group.com.fassko.MeteoLV"),
           let home = userDefaults.string(forKey: "home") else {
