@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Intents
 
 #if canImport(WidgetKit)
   import WidgetKit
@@ -52,7 +53,25 @@ extension ObservationStation {
       WidgetCenter.shared.reloadAllTimelines()
     }
     
+    donateIntent()
+    
     completion()
+  }
+  
+  private func donateIntent() {
+    let intent = CurrentConditionsIntent()
+    intent.suggestedInvocationPhrase = "Current Temperature"
+    let interaction = INInteraction(intent: intent, response: nil)
+    
+    interaction.donate { (error) in
+      if error != nil {
+        if let error = error as NSError? {
+          print("Interaction donation failed: \(error.description)")
+        } else {
+          print("Successfully donated interaction")
+        }
+      }
+    }
   }
   
   func toggleFavorite(_ completion: @escaping () -> Void) {
