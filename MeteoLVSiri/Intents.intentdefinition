@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>INEnums</key>
+	<array/>
+	<key>INIntentDefinitionModelVersion</key>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>p0Bw8H</string>
+	<key>INIntentDefinitionSystemVersion</key>
+	<string>19H2</string>
+	<key>INIntentDefinitionToolsBuildVersion</key>
+	<string>12A7300</string>
+	<key>INIntentDefinitionToolsVersion</key>
+	<string>12.0.1</string>
+	<key>INIntents</key>
+	<array>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Temperature in your Home location</string>
+			<key>INIntentDescriptionID</key>
+			<string>BXucAc</string>
+			<key>INIntentName</key>
+			<string>CurrentConditions</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Temperature in your Home location</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>lAuxkj</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Current Temperature</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>QKFNp0</string>
+				</dict>
+			</dict>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Current temperature is ${temperature}</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>AGZegK</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Current temperature is ${temperature}</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>JhOHoN</string>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Please set the home location.</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>Q3FZnq</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Please set the home location.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>deE7Za</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>4</integer>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Temperature</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>usAj5I</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>temperature</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Current Temperature</string>
+			<key>INIntentTitleID</key>
+			<string>YHffof</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
+		</dict>
+	</array>
+	<key>INTypes</key>
+	<array/>
+</dict>
+</plist>
