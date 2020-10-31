@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,11 +31,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iwM-GM-41h">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="15.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="temperature" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-Zb-aGn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="15.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-Zb-aGn">
+                                                        <rect key="frame" x="0.0" y="0.5" width="50" height="16"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="tmo-mo-O1j"/>
                                                         </constraints>
+                                                        <imageReference key="image" image="thermometer" catalog="system" symbolScale="medium"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dXv-r2-c76">
                                                         <rect key="frame" x="70" y="0.0" width="50" height="15.5"/>
@@ -46,11 +50,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lPX-Iq-HP8">
                                                 <rect key="frame" x="0.0" y="30.5" width="148.5" height="15.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="5tJ-4R-VGb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="15.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5tJ-4R-VGb">
+                                                        <rect key="frame" x="0.0" y="2" width="50" height="12.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="GtG-vQ-7UK"/>
                                                         </constraints>
+                                                        <imageReference key="image" image="wind" catalog="system" symbolScale="medium"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lrg-cy-ity">
                                                         <rect key="frame" x="70" y="0.0" width="78.5" height="15.5"/>
@@ -64,7 +70,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-SD-koL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-SD-koL">
                                 <rect key="frame" x="0.0" y="45" width="320" height="75"/>
                                 <connections>
                                     <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="1Li-hh-DGv"/>
@@ -77,6 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                         <constraints>
                             <constraint firstItem="LHl-up-zyo" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="Nsr-bv-2lM"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="WC7-SD-koL" secondAttribute="bottom" id="QTP-yc-Ylo"/>
@@ -91,7 +98,6 @@
                             <constraint firstItem="cEv-80-CVE" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="sh7-gO-C8p"/>
                             <constraint firstItem="LHl-up-zyo" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="sj6-6b-No0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -110,7 +116,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="temperature" width="22" height="43"/>
-        <image name="wind" width="43" height="36"/>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
+        <image name="wind" catalog="system" width="128" height="101"/>
     </resources>
 </document>

@@ -73,7 +73,7 @@ class ObservationsViewController: UIViewController, Storyboarded {
           let annotation = StationAnnotation(station: station)
           annotation.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
           annotation.title = station.title
-          annotation.subtitle = station.temperature
+          annotation.subtitle = station.temperatureWithUnits
           annotation.accessibilityLabel = station.name
           annotation.accessibilityIdentifier = station.name
           

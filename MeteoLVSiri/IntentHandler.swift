@@ -28,12 +28,11 @@ class SiriIntentHandler: NSObject, CurrentConditionsIntentHandling {
       switch result {
       case let .success(stations):
         
-        guard let homeStation = stations.first(where: { $0.id == home }),
-              let temperature = homeStation.temperature else {
+        guard let homeStation = stations.first(where: { $0.id == home }) else {
           return
         }
         
-        completion(.success(temperature: temperature.replacingOccurrences(of: ",", with: ".")))
+        completion(.success(temperature: homeStation.temperatureWithUnits.replacingOccurrences(of: ",", with: ".")))
       case let .failure(error):
         debugPrint(error)
       }
