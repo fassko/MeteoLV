@@ -88,7 +88,7 @@ struct MeteoLVWidgetEntryView: View {
       if let observationStation = entry.observationStation {
         GroupBox(label: Text(observationStation.name), content: {
           VStack(spacing: 10) {
-            Label(observationStation.temperature!, systemImage: "thermometer")
+            Label(observationStation.temperatureWithUnits, systemImage: "thermometer")
             Label(observationStation.wind!, systemImage: "wind")
           }.padding(.vertical, 5)
         })

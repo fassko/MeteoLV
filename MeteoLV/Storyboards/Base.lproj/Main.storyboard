@@ -3,7 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -126,12 +126,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="H1g-b5-mT1">
                         <rightBarButtonItems>
-                            <barButtonItem image="favorites" style="plain" id="GgK-89-wcO">
+                            <barButtonItem image="star" catalog="system" style="plain" id="GgK-89-wcO">
                                 <connections>
                                     <action selector="favorite:" destination="kg8-nm-Ie8" id="Lcr-E8-Z4Y"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="home" style="plain" id="Azt-1P-wFm">
+                            <barButtonItem image="house" catalog="system" style="plain" id="Azt-1P-wFm">
                                 <connections>
                                     <action selector="setHome:" destination="kg8-nm-Ie8" id="B0y-Pf-RZh"/>
                                 </connections>
@@ -248,8 +248,8 @@
     </scenes>
     <resources>
         <image name="Logo" width="196" height="196"/>
-        <image name="favorites" width="30" height="30"/>
-        <image name="home" width="27" height="28"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

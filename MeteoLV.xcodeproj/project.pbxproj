@@ -25,6 +25,10 @@
 		631E462A21BC0D93000CC546 /* meteoLVStation.json in Resources */ = {isa = PBXBuildFile; fileRef = 631E462921BC0D93000CC546 /* meteoLVStation.json */; };
 		631E462C21BC0DB1000CC546 /* roadLVStation.json in Resources */ = {isa = PBXBuildFile; fileRef = 631E462B21BC0DB1000CC546 /* roadLVStation.json */; };
 		631E462E21BC0DD6000CC546 /* ObservationsViewController+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462D21BC0DD6000CC546 /* ObservationsViewController+UITests.swift */; };
+		6348ECF4254DBD060096386D /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
+		6348ED02254DBD9A0096386D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462521BBF287000CC546 /* Constants.swift */; };
+		6348ED0F254DBE530096386D /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
+		6348ED16254DBE590096386D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E462521BBF287000CC546 /* Constants.swift */; };
 		635524EF205E56A700EC0E23 /* ObservationsStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524EE205E56A700EC0E23 /* ObservationsStation.swift */; };
 		635524F4205E5E6700EC0E23 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635524F3205E5E6700EC0E23 /* InfoViewController.swift */; };
 		6368AE7C253E115600CB8EF1 /* Station+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639BC073253CA93800B0E66B /* Station+Extension.swift */; };
@@ -730,7 +734,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				639BC074253CA93800B0E66B /* Station+Extension.swift in Sources */,
+				6348ED0F254DBE530096386D /* ObservationsStation.swift in Sources */,
 				639BC030253C990100B0E66B /* MeteoLVWidget.swift in Sources */,
+				6348ED16254DBE590096386D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,8 +745,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6368AE7C253E115600CB8EF1 /* Station+Extension.swift in Sources */,
+				6348ECF4254DBD060096386D /* ObservationsStation.swift in Sources */,
 				63DF76BF253E0C0200907EC8 /* Intents.intentdefinition in Sources */,
 				63DF769B253E0AB900907EC8 /* IntentHandler.swift in Sources */,
+				6348ED02254DBD9A0096386D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,7 +871,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.14.201019.2343;
+				CURRENT_PROJECT_VERSION = 1.15.201031.1814;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -925,7 +933,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.14.201019.2343;
+				CURRENT_PROJECT_VERSION = 1.15.201031.1814;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -954,7 +962,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.14.201019.2343;
+				CURRENT_PROJECT_VERSION = 1.15.201031.1814;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
@@ -981,7 +989,7 @@
 				CODE_SIGN_ENTITLEMENTS = MeteoLV/MeteoLV.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.14.201019.2343;
+				CURRENT_PROJECT_VERSION = 1.15.201031.1814;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = MeteoLV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;

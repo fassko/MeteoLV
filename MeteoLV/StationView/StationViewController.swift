@@ -6,6 +6,7 @@
 //  Copyright © 2018 fassko. All rights reserved.
 //
 
+import Intents
 import UIKit
 
 import MeteoLVProvider
@@ -37,15 +38,12 @@ extension StationViewController {
   @IBAction func setHome(_ sender: Any) {
     station.setHome { [weak self] in
       self?.updateHomeButton()
+      self?.donateIntent()
     }
   }
   
   @IBAction func share(_ sender: Any) {
-    guard let temperature = station.temperature, let wind = station.wind else {
-      return
-    }
-    
-    let text = "\(station.name) \(temperature) \(wind)"
+    let text = "\(station.name) \(station.temperatureWithUnits) \(String(describing: station.wind))"
     let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
     navigationController?.present(activityViewController, animated: true, completion: {})
   }
@@ -59,6 +57,22 @@ extension StationViewController {
   private func updateHomeButton() {
     UIView.animate(withDuration: 0.5) { [weak self] in
       self?.homeButton.image = self?.station.isHome ?? false ? .homeFull : .home
+    }
+  }
+  
+  private func donateIntent() {
+    let intent = CurrentConditionsIntent()
+    intent.suggestedInvocationPhrase = "Current Temperature"
+    let interaction = INInteraction(intent: intent, response: nil)
+
+    interaction.donate { (error) in
+      if error != nil {
+        if let error = error as NSError? {
+          print("Interaction donation failed: \(error.description)")
+        } else {
+          print("Successfully donated interaction")
+        }
+      }
     }
   }
 }

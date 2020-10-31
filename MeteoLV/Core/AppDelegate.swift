@@ -27,21 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mapNavigationController = UINavigationController()
     mapCoordinator = MapViewCooordinator(navigationController: mapNavigationController)
     mapCoordinator?.start()
-    let mapTabBarItem = UITabBarItem(title: "Map".localized, image: UIImage(named: "map"), tag: 0)
+    let mapTabBarItem = UITabBarItem(title: "Map".localized, image: UIImage(systemName: "map"), tag: 0)
     mapTabBarItem.accessibilityLabel = "Map"
     mapNavigationController.tabBarItem = mapTabBarItem
     
     let favoritesNavigationController = UINavigationController()
     favoritesCoordinator = FavoritesViewCoordinator(navigationController: favoritesNavigationController)
     favoritesCoordinator?.start()
-    let favoritesTabBarItem = UITabBarItem(title: "Favorites".localized, image: UIImage(named: "favorites"), tag: 0)
+    let favoritesTabBarItem = UITabBarItem(title: "Favorites".localized, image: UIImage(systemName: "star"), tag: 0)
     favoritesTabBarItem.accessibilityLabel = "Favorites"
     favoritesNavigationController.tabBarItem = favoritesTabBarItem
     
     let listNavigationController = UINavigationController()
     listCoordinator = ListCoordinator(navigationController: listNavigationController)
     listCoordinator?.start()
-    let listTabBarItem = UITabBarItem(title: "List".localized, image: UIImage(named: "list"), tag: 0)
+    let listTabBarItem = UITabBarItem(title: "List".localized, image: UIImage(systemName: "list.dash"), tag: 0)
     listTabBarItem.accessibilityLabel = "List"
     listNavigationController.tabBarItem = listTabBarItem
     

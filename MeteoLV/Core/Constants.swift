@@ -24,8 +24,8 @@ public extension UserDefaults {
 }
 
 extension UIImage {
-  static let favoritesFull = UIImage(named: "favorites-full")
-  static let favorites = UIImage(named: "favorites")
-  static let homeFull = UIImage(named: "home-full")
-  static let home = UIImage(named: "home")
+  static let favoritesFull = UIImage(systemName: "star.fill")
+  static let favorites = UIImage(systemName: "star")
+  static let homeFull = UIImage(systemName: "house.fill")
+  static let home = UIImage(systemName: "house")
 }
